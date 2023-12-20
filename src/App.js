@@ -6,7 +6,7 @@ import NotFound from './website/component/NotFound';
 import './website/assets/css/style.css'
 // const Home = lazy(() => import('./website/pages/Home'));
 import Home from './website/pages/Home'
-const About = lazy(() => import('./website/pages/About'));
+const About = lazy(() => import('./website/pages/aboutPages/About'));
 const Connect = lazy(() => import('./website/pages/Connect'));
 const Education = lazy(() => import('./website/pages/work/Education'));
 const Communicable = lazy(() => import('./website/pages/communicables/Communicable'));
@@ -16,7 +16,6 @@ const Livelihood = lazy(() => import('./website/pages/work/Livelihood'));
 const SustainableLiving = lazy(() => import('./website/pages/work/SustainableLiving'));
 const Publication = lazy(() => import('./website/pages/work/Publication'));
 const History = lazy(() => import('./website/pages/aboutPages/History'));
-const Blog = lazy(() => import('./website/pages/communicables/Blog'));
 const Mission = lazy(() => import('./website/pages/aboutPages/Mission'));
 const WhoWeWork = lazy(() => import('./website/pages/aboutPages/WhoWeWork'));
 const Policies = lazy(() => import('./website/pages/aboutPages/Policies'));
@@ -47,7 +46,6 @@ function App() {
           <Route path='/work/sustainable-living' element={<SustainableLiving />} />
           <Route path='/work/publication' element={<Publication />} />
           <Route path='/communicable' element={<Communicable />} />
-          <Route path='/communicables/blog/' element={<Blog />} />
           <Route path='/*' element={<NotFound />} />
         </Routes>
       </Suspense>

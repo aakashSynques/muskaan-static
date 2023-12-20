@@ -1,10 +1,19 @@
 import React from 'react'
 import { Container, Col, Row } from 'react-bootstrap'
 import AboutSideBar from './AboutSideBar'
+import { Helmet } from "react-helmet";
 
 const Mission = () => {
     return (
         <>
+            <Helmet>
+                <html lang="en" />
+                <title>Muskaan - Mission</title>
+                <meta name="twitter:title" content='Mission' />
+                <meta name="description" content="muskaan ngo" />
+                <meta name="theme-color" content="#E6E6FA" />
+            </Helmet>
+            
             <div className='connect-bg fixed-bg'>
                 <Container className='text-center text-white'>
                     <h1>Mission</h1>

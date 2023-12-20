@@ -1,8 +1,5 @@
 import React from 'react'
 import { Container } from 'react-bootstrap';
-import Tab from 'react-bootstrap/Tab';
-import Tabs from 'react-bootstrap/Tabs';
-import Blog from './Blog';
 import Reports from './Reports';
 import FieldRealities from './FieldRealities';
 import CommunityStorie from './CommunityStorie';

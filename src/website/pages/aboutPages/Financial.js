@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Col, Row, Card } from 'react-bootstrap'
+import { Container, Col, Row } from 'react-bootstrap'
 import AboutSideBar from './AboutSideBar'
 import myPdf from '../../assets/pdfFile/2020-21 - Muskaan Audited accounts.pdf'
 import myPdf2 from '../../assets/pdfFile/2021-22 - Muskaan Audited accounts.pdf'
@@ -8,10 +8,17 @@ import myPdf4 from '../../assets/pdfFile/FCRA Q1 Apr - June 2023.pdf'
 import myPdf5 from '../../assets/pdfFile/FCRA Q2 July - Sept 2023.pdf'
 import myPdf6 from '../../assets/pdfFile/FCRA Q3 Oct - Dec 2022.pdf'
 import { FaCheck } from "react-icons/fa6";
-
+import { Helmet } from "react-helmet";
 const Financial = () => {
     return (
         <>
+            <Helmet>
+                <html lang="en" />
+                <title>Muskaan - Financial</title>
+                <meta name="title" content='financial' />
+                <meta name="description" content="muskaan ngo" />
+                <meta name="theme-color" content="#E6E6FA" />
+            </Helmet>
             <div className='connect-bg fixed-bg'>
                 <Container className='text-center text-white'>
                     <h1>Connect</h1>
@@ -25,7 +32,7 @@ const Financial = () => {
                         <Col sm={10} className='tab_tabbing'>
                             <ul>
                                 <li>
-                                    <FaCheck className='main-color'/> &nbsp;
+                                    <FaCheck className='main-color' /> &nbsp;
                                     FCRA Q1 Apr - June 2023
                                     <span className='pull-right'>
                                         <a href={myPdf4} target="_blank">
@@ -39,7 +46,7 @@ const Financial = () => {
 
 
                                 <li>
-                                <FaCheck className='main-color'/> &nbsp;
+                                    <FaCheck className='main-color' /> &nbsp;
                                     FCRA Q2 July - Sept 2023
                                     <span className='pull-right'>
                                         <a href={myPdf5} target="_blank">
@@ -53,7 +60,7 @@ const Financial = () => {
 
 
                                 <li>
-                                <FaCheck className='main-color'/> &nbsp;
+                                    <FaCheck className='main-color' /> &nbsp;
                                     FCRA Q3 Oct - Dec 2022
                                     <span className='pull-right'>
                                         <a href={myPdf6} target="_blank">
@@ -67,7 +74,7 @@ const Financial = () => {
 
 
                                 <li>
-                                    <FaCheck className='main-color'/> &nbsp;
+                                    <FaCheck className='main-color' /> &nbsp;
                                     Annual Report 2020 - 2021
                                     <span className='pull-right'>
                                         <a href={myPdf} target="_blank">
@@ -80,7 +87,7 @@ const Financial = () => {
                                 </li>
 
                                 <li>
-                                    <FaCheck className='main-color'/> &nbsp;
+                                    <FaCheck className='main-color' /> &nbsp;
                                     Annual Report 2021 - 2022
                                     <span className='pull-right'>
                                         <a href={myPdf2} target="_blank">
@@ -93,7 +100,7 @@ const Financial = () => {
                                 </li>
 
                                 <li>
-                                <FaCheck className='main-color'/> &nbsp;
+                                    <FaCheck className='main-color' /> &nbsp;
                                     Annual Report 2022 - 2023
                                     <span className='pull-right'>
                                         <a href={myPdf3} target="_blank">

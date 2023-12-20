@@ -1,37 +1,16 @@
-# Enable Apache's mod_headers module
-<IfModule mod_headers.c>
-
-  # Set a default cache control for static assets
-  Header set Cache-Control "max-age=604800, public"
-
-  # Cache control for CSS and JavaScript files
-  <FilesMatch "\.(css|js)$">
-    Header set Cache-Control "max-age=31536000, public"
-  </FilesMatch>
-
-  # Cache control for image files (WebP, JPG, PNG, etc.)
-  <FilesMatch "\.(jpg|jpeg|png|gif|webp)$">
-    Header set Cache-Control "max-age=31536000, public"
-  </FilesMatch>
-
-  # Cache control for video files (MP4)
-  <FilesMatch "\.(mp4)$">
-    Header set Cache-Control "max-age=604800, public"
-  </FilesMatch>
-
-  # Cache control for HTML and JSON files
-  <FilesMatch "\.(html|json)$">
-    Header set Cache-Control "max-age=3600, public"
-  </FilesMatch>
-
-  <FilesMatch "\.(jpg|jpeg|png|gif|js|css|woff|woff2|svg|ttf|eot)$">
-    Header set Cache-Control "max-age=31536000, public"
-</FilesMatch>
-
-
-Cache-Control: max-age=31536000
-
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-l
+  RewriteRule . /index.html [L]
 
 </IfModule>
 
-
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|jpg|jpeg|png|gif|webp|mp4)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+</IfModule>

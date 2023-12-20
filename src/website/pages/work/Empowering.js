@@ -7,10 +7,17 @@ import UltimateFrisbee from './empoweringAccordian/UltimateFrisbee';
 import ChildProtection from './empoweringAccordian/ChildProtection';
 import Theatre from './empoweringAccordian/Theatre';
 import YouthFellowships from './empoweringAccordian/YouthFellowships';
-
+import { Helmet } from "react-helmet";
 const Empowering = () => {
     return (
         <>
+        <Helmet>
+        <html lang="en" />
+        <title>Muskaan - Empowering Children And Youth</title>
+        <meta name="twitter:title" content='Empowering Children And Youth' />
+        <meta name="description" content="muskaan ngo" />
+        <meta name="theme-color" content="#E6E6FA" />
+      </Helmet>
               <div className='connect-bg fixed-bg'>
                 <Container className='text-center text-white'>
                         <h1>Empowering Children And Youth</h1>

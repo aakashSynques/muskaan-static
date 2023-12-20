@@ -1,11 +1,18 @@
 import React from 'react'
 import { Container, Col, Row, Tab, Tabs, Image } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
 import AboutSideBar from './AboutSideBar'
-
+import { Helmet } from "react-helmet";
 const History = () => {
   return (
     <>
+       <Helmet>
+        <html lang="en" />
+        <title>Muskaan - History</title>
+        <meta name="twitter:title" content='History' />
+        <meta name="description" content="muskaan ngo" />
+        <meta name="theme-color" content="#E6E6FA" />
+      </Helmet>
+
       <div className='connect-bg fixed-bg'>
         <Container className='text-center text-white'>
           <h1>History</h1>

@@ -1,7 +1,5 @@
 import React from 'react'
-import { Container, Row, Col, Form, FormControl, Button } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
-import ReCAPTCHA from 'react-google-recaptcha';
+import { Container} from 'react-bootstrap'
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Contect from './connectTabs/Contect';
@@ -10,6 +8,7 @@ import Internship from './connectTabs/Internship';
 import Volunteer from './connectTabs/Volunteer';
 import DonateNow from './connectTabs/DonateNow';
 import Jobs from './connectTabs/Jobs';
+import { Helmet } from "react-helmet";
 
 
 
@@ -17,6 +16,14 @@ const Connect = () => {
 
   return (
     <>
+        <Helmet>
+        <html lang="en" />
+        <title>Muskaan - Connect</title>
+        <meta name="twitter:title" content='Connect' />
+        <meta name="description" content="muskaan ngo" />
+        <meta name="theme-color" content="#E6E6FA" />
+      </Helmet>
+
       <div className='connect-bg fixed-bg'>
         <Container className='text-center text-white'>
           <h1>Connect</h1>

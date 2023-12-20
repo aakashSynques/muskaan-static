@@ -4,12 +4,19 @@ import Accordion from 'react-bootstrap/Accordion';
 import CollectiveEnterprises from './livelihoodsAccordian/CollectiveEnterprises';
 import MicroEnterprises from './livelihoodsAccordian/MicroEnterprises';
 import StitchingCentre from './livelihoodsAccordian/StitchingCentre';
-
+import { Helmet } from "react-helmet";
 const Livelihood = () => {
   return (
     <>
+      <Helmet>
+        <html lang="en" />
+        <title>Muskaan - Livelihoods</title>
+        <meta name="twitter:title" content='Livelihoods' />
+        <meta name="description" content="muskaan ngo" />
+        <meta name="theme-color" content="#E6E6FA" />
+      </Helmet>
       <div className='connect-bg fixed-bg'>
-                <Container className='text-center text-white'>
+        <Container className='text-center text-white'>
           <h1>Livelihoods</h1>
         </Container>
       </div>

@@ -21,7 +21,12 @@ const Footer = () => {
           <Row>
             <Col sm={4} xs={12}>
               <div className="footer-box text-center">
-                <Image src={logo} alt="logo " className="img-fluid"      style={{width: "25%"}}/>
+                <picture>
+                  <source srcSet={require('../assets/images/Muskaan-logo.webp')} type="image/webp" />
+                  <source srcSet={require('../assets/images/Muskaan-logo.avif')} type="image/avif" />
+                  <img loading="lazy" src={require('../assets/images/Muskaan-logo.png')} alt="Muskaan ngo"
+                    className="img-fluid" style={{ width: "25%" }}  />
+                </picture>
                 <p>We have been actively working on this journey with members of denotified tribes and the urban poor since 1998.</p>
                 <hr />
                 <ul className="socials">

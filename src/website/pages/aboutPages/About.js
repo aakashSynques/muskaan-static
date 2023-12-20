@@ -1,13 +1,18 @@
 
 import React from 'react'
 import { Container, Col, Row, Card } from 'react-bootstrap'
-import AboutSideBar from './aboutPages/AboutSideBar'
-
-
-
+import AboutSideBar from './AboutSideBar'
+import { Helmet } from "react-helmet";
 const About = () => {
   return (
     <>
+      <Helmet>
+        <html lang="en" />
+        <title>Muskaan - About</title>
+        <meta name="title" content='About' />
+        <meta name="description" content="muskaan ngo" />
+        <meta name="theme-color" content="#E6E6FA" />
+      </Helmet>
       <div className='connect-bg fixed-bg'>
         <Container className='text-center text-white'>
           <h1>About Us</h1>

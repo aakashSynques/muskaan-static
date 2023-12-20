@@ -6,10 +6,17 @@ import Libraries from './workAccordian/Libraries';
 import BuildingPerspectives from './workAccordian/BuildingPerspectives';
 import IndigenousEducation from './workAccordian/IndigenousEducation';
 import Scientific from './workAccordian/Scientific';
+import { Helmet } from "react-helmet";
 const Education = () => {
     return (
         <>
-      
+            <Helmet>
+                <html lang="en" />
+                <title>Muskaan - Education</title>
+                <meta name="twitter:title" content='Education' />
+                <meta name="description" content="muskaan ngo" />
+                <meta name="theme-color" content="#E6E6FA" />
+            </Helmet>
             <div className='connect-bg fixed-bg'>
                 <Container className='text-center text-white'>
                     {/* <h1>Connect</h1> */}

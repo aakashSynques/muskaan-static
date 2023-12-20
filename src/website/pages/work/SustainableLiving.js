@@ -5,10 +5,18 @@ import PermacultureAndComposting from './sustainableLivingAccordian/Permaculture
 import MittiKaGhar from './sustainableLivingAccordian/MittiKaGhar';
 import ReducePlastic from './sustainableLivingAccordian/ReducePlastic';
 
+import { Helmet } from "react-helmet";
 const SustainableLiving = () => {
     return (
         <>
-          <div className='connect-bg fixed-bg'>
+            <Helmet>
+                <html lang="en" />
+                <title>Muskaan - Sustainable Living</title>
+                <meta name="twitter:title" content='Sustainable Living' />
+                <meta name="description" content="muskaan ngo" />
+                <meta name="theme-color" content="#E6E6FA" />
+            </Helmet>
+            <div className='connect-bg fixed-bg'>
                 <Container className='text-center text-white'>
                     <h1>Sustainable Living</h1>
                 </Container>
@@ -33,7 +41,7 @@ const SustainableLiving = () => {
                         <Accordion.Item eventKey="2">
                             <Accordion.Header>Reduce Plastic</Accordion.Header>
                             <Accordion.Body>
-                                    <ReducePlastic />
+                                <ReducePlastic />
                             </Accordion.Body>
                         </Accordion.Item>
                     </Accordion>

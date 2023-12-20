@@ -9,11 +9,18 @@ import policies4 from '../../assets/pdfFile/Conflict of Interest Policy.pdf'
 import policies5 from '../../assets/pdfFile/Whistle blower policy.pdf'
 import { FaDownload } from "react-icons/fa";
 
-
+import { Helmet } from "react-helmet";
 
 const Policies = () => {
     return (
         <>
+            <Helmet>
+                <html lang="en" />
+                <title>Muskaan - Policies</title>
+                <meta name="twitter:title" content='Polices' />
+                <meta name="description" content="muskaan ngo" />
+                <meta name="theme-color" content="#E6E6FA" />
+            </Helmet>
             <div className='connect-bg fixed-bg'>
                 <Container className='text-center'>
                     {/* <h1>Connect</h1> */}
@@ -34,7 +41,7 @@ const Policies = () => {
                                         <div className='text-center '>
                                             <h6>GENDER POLICY</h6>
                                             <a href={policies1} target="_blank" download>
-                                            <FaDownload />  Download
+                                                <FaDownload />  Download
                                             </a>
                                         </div>
                                     </div>
@@ -48,7 +55,7 @@ const Policies = () => {
                                         <div className='text-center '>
                                             <h6>CHILD PROTECTION POLICY</h6>
                                             <a href={policies2} target="_blank" download>
-                                                       <FaDownload />  Download
+                                                <FaDownload />  Download
                                             </a>
                                         </div>
                                     </div>
@@ -63,7 +70,7 @@ const Policies = () => {
                                         <div className='text-center '>
                                             <h6>HR POLICY</h6>
                                             <a href={policies3} target="_blank" download>
-                                                       <FaDownload />  Download
+                                                <FaDownload />  Download
                                             </a>
                                         </div>
                                     </div>
@@ -77,7 +84,7 @@ const Policies = () => {
                                         <div className='text-center '>
                                             <h6 className='text-uppercase'>Conflict of Interest Policy</h6>
                                             <a href={policies4} target="_blank" download>
-                                                       <FaDownload />  Download
+                                                <FaDownload />  Download
                                             </a>
                                         </div>
                                     </div>
@@ -91,7 +98,7 @@ const Policies = () => {
                                         <div className='text-center '>
                                             <h6 className='text-uppercase'>Whistle blower policy</h6>
                                             <a href={policies5} target="_blank" download>
-                                                       <FaDownload />  Download
+                                                <FaDownload />  Download
                                             </a>
                                         </div>
                                     </div>

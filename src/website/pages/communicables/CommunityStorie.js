@@ -1,20 +1,4 @@
-// import React from 'react'
-
-// const CommunityStorie = () => {
-//   return (
-//     <>
-
-//     </>
-//   )
-// }
-
-// export default CommunityStorie
-
-
 import React from 'react'
-import { Container, Image, Row, Col } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
-import BlogCompoent from './BlogCompoent';
 const CommunityStorie = () => {
     const apiData = [
         {
@@ -27,21 +11,6 @@ const CommunityStorie = () => {
     ];
     return (
         <>
-            {/* <div className='connect-bg fixed-bg'>
-                <Container className='text-center text-white'>
-                    <h1>Community Stories</h1>
-                </Container>
-            </div>
-            <Container className='mt-5'>
-                <Row>
-                    {apiData.map((item, index) => (
-                        <Col sm={4} className='my-2'>
-                            <BlogCompoent key={index} {...item} />
-                        </Col>
-                    ))}
-                </Row>
-
-            </Container> */}
             <div className='report-table-font'>
                 <table className="table">
                     <thead>

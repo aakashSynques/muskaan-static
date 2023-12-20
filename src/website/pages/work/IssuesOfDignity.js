@@ -4,10 +4,19 @@ import Accordion from 'react-bootstrap/Accordion';
 import DocumentsAndEntitlements from './issuesOfDignityAccordian/DocumentsAndEntitlements';
 import DenotifiedTribes from './issuesOfDignityAccordian/DenotifiedTribes';
 import MentalHealth from './issuesOfDignityAccordian/MentalHealth';
+import { Helmet } from "react-helmet";
 const IssuesOfDignity = () => {
     return (
         <>
-           <div className='connect-bg fixed-bg'>
+            <Helmet>
+                <html lang="en" />
+                <title>Muskaan - Issues Of Dignity And Survival</title>
+                <meta name="twitter:title" content='Issues Of Dignity And Survival' />
+                <meta name="description" content="muskaan ngo" />
+                <meta name="theme-color" content="#E6E6FA" />
+            </Helmet>
+
+            <div className='connect-bg fixed-bg'>
                 <Container className='text-center text-white'>
                     <h1>Issues Of Dignity And Survival</h1>
                 </Container>
@@ -30,20 +39,20 @@ const IssuesOfDignity = () => {
                             </Accordion.Body>
                         </Accordion.Item>
 
-                        
+
                         <Accordion.Item eventKey="2">
                             <Accordion.Header>Mental Health</Accordion.Header>
                             <Accordion.Body>
-                            <MentalHealth />
+                                <MentalHealth />
                             </Accordion.Body>
                         </Accordion.Item>
 
-                      
+
 
                     </Accordion>
                 </Container>
             </div>
-            </>
+        </>
     )
 }
 
