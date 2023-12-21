@@ -502,7 +502,9 @@ span.date {
     }
 
     .slider-img {
-        height: auto !important
+        height: 135px !important;
+        width: 100%;
+
     }
 
     .navbar-toggler {
@@ -526,7 +528,10 @@ span.date {
     .navbar-collapse {
         margin: 21px 0
     }
-
+.blog-post img{
+    width: 100%;
+    height: auto;
+}
     .top-content-wrap {
         font-size: 14px
     }

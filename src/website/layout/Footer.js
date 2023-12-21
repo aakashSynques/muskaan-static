@@ -25,7 +25,7 @@ const Footer = () => {
                   <source srcSet={require('../assets/images/Muskaan-logo.webp')} type="image/webp" />
                   <source srcSet={require('../assets/images/Muskaan-logo.avif')} type="image/avif" />
                   <img loading="lazy" src={require('../assets/images/Muskaan-logo.png')} alt="Muskaan ngo"
-                    className="img-fluid" style={{ width: "25%" }}  />
+                    className="img-fluid" style={{ width: "25%" }}   width='92' height='92'/>
                 </picture>
                 <p>We have been actively working on this journey with members of denotified tribes and the urban poor since 1998.</p>
                 <hr />

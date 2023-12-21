@@ -15,7 +15,7 @@ const MainHeader = () => {
                                 <source srcSet={require('../assets/images/Muskaan-logo.webp')} type="image/webp" className='logo-width' />
                                 <source srcSet={require('../assets/images/Muskaan-logo.avif')} type="image/avif" className='logo-width' />
                                 <img  loading="lazy" src={require('../assets/images/Muskaan-logo.png')} alt="Muskaan ngo"
-                                    className="img-fluid logo-width" />
+                                    className="img-fluid logo-width"  width='76' height='76'/>
                             </picture>
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />

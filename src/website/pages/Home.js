@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Button, Image } from 'react-bootstrap'
 import Carousel from 'react-bootstrap/Carousel';
 import { Link } from 'react-router-dom'
@@ -24,23 +24,30 @@ const Home = React.memo(() => {
       <Carousel activeIndex={slider} onSelect={handleSelect} indicators={false}>
         <Carousel.Item>
           <picture>
-            <source srcSet={require('../assets/images/sliderImg/muskaan-banner1.webp')} type="image/webp"
-              sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 25vw" />
+            <source srcSet={require('../assets/images/sliderImg/muskaan-banner1.webp')} type="image/webp" />
             <link rel="preload" fetchpriority="high" as="image" href={require('../assets/images/sliderImg/muskaan-banner1.jpg')} />
-            <img rel="preload" fetchpriority="high" as="image" data-src={require('../assets/images/sliderImg/muskaan-banner1.webp')}
+            <img rel="preload" fetchpriority="high" as="image"
+              data-src={require('../assets/images/sliderImg/muskaan-banner1.webp')}
               srcset={require('../assets/images/sliderImg/muskaan-banner1.jpg')}
-              alt="Description" 
-              className="d-block w-100 slider-img" loading="lazy"
+              alt="Description" className="d-block slider-img"
+              loading="lazy"
+              width="1900" height="800"
             />
-
           </picture>
         </Carousel.Item>
+
         <Carousel.Item>
           <picture>
-            <source srcSet={require('../assets/images/sliderImg/slider2.webp')} type="image/webp" className="d-block w-100 slider-img" />
-            <source srcSet={require('../assets/images/sliderImg/muskaan-banner.avif')} type="image/avif" className="d-block w-100 slider-img" />
-            <img rel="preload" fetchpriority="low" as="image" src={require('../assets/images/sliderImg/slider2.webp')} alt="Muskaan ngo"
-              className="d-block w-100 slider-img" />
+            <source srcSet={require('../assets/images/sliderImg/slider2.webp')} type="image/webp" />
+            <link rel="preload" fetchpriority="high" as="image"
+              href={require('../assets/images/sliderImg/slider2.webp')} />
+            <img rel="preload" fetchpriority="high" as="image"
+              loading="lazy"
+              data-src={require('../assets/images/sliderImg/slider2.webp')}
+              srcset={require('../assets/images/sliderImg/slider2.jpg')}
+              alt="Description" className="d-block slider-img"
+              width="1900" height="800"
+            />
           </picture>
         </Carousel.Item>
       </Carousel>
@@ -52,25 +59,28 @@ const Home = React.memo(() => {
             <div className='about-section section-title pe-lg-5 pt-4 pe-md-0'>
               <h2 >About Us</h2>
               <p>At Muskaan, we are committed to empowering children and young individuals from marginalized communities through education. Our approach encourages and enables them to explore and address the realities of their own lives as well as of other vulnerable people around them. We adopt these critical learning processes in our formal school and out-of-school community spaces, as libraries and learning centres.</p>
-              <p>Muskaan operates at the grassroots level in informal urban settlements and villages in order to nurture the potential of people across various age groups and life-stages. We try to focus on individual journeys of community members while drawing strength from collective pursuits. A key aspect of our undertaking is to strengthen leadership within marginalized communities, enabling them to spearhead and guide interventions at community level.</p>
-              <Link to="/about-us"><Button className='btn btn-danger'>Learn more</Button> </Link>
+              <p>Muskaan operates at the grassroots level in informal urban settlements and villages in order to nurture the potential of people across various age groups and life-stages. We try to focus on individual journeys of community members while drawing strength from collective pursuits. A key aspect of our undertaking is to strengthen leadership within marginalized communities, enabling them to spearhead and guide interventions at community level
+                <br />
+                <Link to="/about-us" className='btn main-bg text-white mt-4' title="Learn more about Muskaan">Read More...</Link>
+              </p>
             </div>
           </Col>
           <Col sm={6}>
             <div className="about-image about-one-img d-none d-sm-block">
               <picture>
-                <source srcSet={require('../assets/images/about1.webp')} type="image/webp" sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 25vw" />
-                <link rel="preload" as="image" href={require('../assets/images/about1.jpg')} />
-                <img data-src={require('../assets/images/about1.jpg')}
+                <source srcSet={require('../assets/images/about1.webp')} type="image/webp" />
+                <link rel="preload" as="image" href={require('../assets/images/about1.webp')} />
+                <img data-src={require('../assets/images/about1.webp')}
                   srcset={require('../assets/images/about1.jpg')}
-                  sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px" alt="Description" width='100%' height='auto'
+                  alt="Description" width="500" height="500"
                   className="shadow d-none d-sm-block img-fluid" fetchpriority="low"
                 />
               </picture>
 
               <img data-src={require('../assets/images/about2.jpg')}
                 srcset={require('../assets/images/about2.webp')}
-                sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px" alt="Description" width='auto' height='auto'
+                sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px"
+                alt="Description" width="385" height="285"
                 className="shadow imh-fluid" fetchpriority="low" />
             </div>
           </Col>
@@ -91,15 +101,16 @@ const Home = React.memo(() => {
                 <picture>
                   <img data-src={require('../assets/images/workimge/education.png')}
                     srcset={require('../assets/images/workimge/education.png')}
-                    sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px" alt="Description"
-                    width='100%' height='auto'
+                    alt="Description"
+                    width='352' height='352'
                     className="img-fluid" fetchpriority="low" />
                 </picture>
                 <h3 className='f-w-6 pt-2'>EDUCATION</h3>
-                <p>More than 90% of children of marginalized communities do not finish school.</p>
-                <Link to='/work/education' className='text-dark'>
-                  Read More
-                </Link>
+                <p>More than 90% of children of marginalized communities do not finish school
+                  {/* <Link to='/work/education' title="Education Work" className='text-dark'>
+                    Read More
+                  </Link> */}
+                </p>
               </div>
             </Col>
 
@@ -109,13 +120,14 @@ const Home = React.memo(() => {
                   <img data-src={require('../assets/images/workimge/capable.png')}
                     srcset={require('../assets/images/workimge/capable.png')}
                     sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px" alt="empowering-children-and-youth"
-                    className="img-fluid" width='100%' height='auto' fetchpriority="low" />
+                    className="img-fluid" width='352' height='352' fetchpriority="low" />
                 </picture>
                 <h3 className='f-w-6 pt-2'>EMPOWERING CHILDREN AND YOUTH</h3>
-                <p>We believe that with the kind of energy that youth contains.</p>
-                <Link to='/work/education' className='text-dark'>
-                  Read More
-                </Link>
+                <p>We believe that with the kind of energy that youth contains
+                  {/* <Link to='/work/empowering-children-and-youth' title="Empowering Children" className='text-dark'>
+                    Read More
+                  </Link> */}
+                </p>
               </div>
             </Col>
 
@@ -124,14 +136,15 @@ const Home = React.memo(() => {
                 <picture>
                   <img data-src={require('../assets/images/workimge/life.png')}
                     srcset={require('../assets/images/workimge/life.png')}
-                    sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px" alt="ISSUES OF DIGNITY AND SURVIVAL"
-                    className="img-fluid" width='100%' height='auto' fetchpriority="low" />
+                    alt="ISSUES OF DIGNITY AND SURVIVAL"
+                    className="img-fluid" width='352' height='352' fetchpriority="low" />
                 </picture>
                 <h3 className='f-w-6 pt-2'>ISSUES OF DIGNITY AND SURVIVAL</h3>
-                <p>The current atmosphere demands documentation that proves the.</p>
-                <Link to='/work/issues-of-dignity-and-survival' className='text-dark'>
-                  Read More
-                </Link>
+                <p>The current atmosphere demands documentation that proves the
+                  {/* <Link to='/work/issues-of-dignity-and-survival' title="Issues Of Dignity" className='text-dark' >
+                    Read More
+                  </Link> */}
+                </p>
               </div>
             </Col>
 
@@ -141,14 +154,16 @@ const Home = React.memo(() => {
                   <img data-src={require('../assets/images/workimge/livelyhood-2.png')}
                     srcset={require('../assets/images/workimge/livelyhood-2.png')}
                     sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px" alt="liveLihoods"
-                    className="img-fluid" width='100%' height='auto' fetchpriority="low" />
+                    className="img-fluid" width='352' height='352' fetchpriority="low" />
                 </picture>
 
                 <h3 className='f-w-6 pt-2'>LIVELIHOODS</h3>
-                <p>With the challenges of Covid-19 pandemic and the lockdowns.</p>
-                <Link to='/work/liveLihoods' className='text-dark'>
-                  Read More
-                </Link>
+                <p>With the challenges of Covid-19 pandemic and the lockdowns
+                  {/* <Link to='/work/liveLihoods' title="LiveLihoods" className='text-dark'>
+                    Read More
+                  </Link> */}
+                </p>
+
               </div>
             </Col>
 
@@ -158,13 +173,15 @@ const Home = React.memo(() => {
                   <img data-src={require('../assets/images/workimge/living.png')}
                     srcset={require('../assets/images/workimge/living.png')}
                     sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px" alt="sustainable-living"
-                    className="img-fluid" width='100%' height='auto' fetchpriority="low" />
+                    className="img-fluid" width='352' height='352' fetchpriority="low" />
                 </picture>
                 <h3 className='f-w-6 pt-2'>SUSTAINABLE LIVING</h3>
-                <p>We believe in the philosophy of sustainable living that aims</p>
-                <Link to='/work/sustainable-living' className='text-dark'>
-                  Read More
-                </Link>
+                <p>We believe in the philosophy of sustainable living that aims
+                  {/* <Link to='/work/sustainable-living' title="Sustainable Living" className='text-dark'>
+                    Read More
+                  </Link> */}
+                </p>
+
               </div>
             </Col>
             <Col lg={4} className="my-2">
@@ -173,13 +190,15 @@ const Home = React.memo(() => {
                   <img data-src={require('../assets/images/workimge/three-books.png')}
                     srcset={require('../assets/images/workimge/three-books.png')}
                     sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px" alt="sustainable-living"
-                    className="img-fluid" width='100%' height='auto' fetchpriority="low" />
+                    className="img-fluid" width='352' height='352' fetchpriority="low" />
                 </picture>
                 <h3 className='f-w-6 pt-2'>PUBLICATIONS</h3>
-                <p>Muskaan Publication Catalouge</p>
-                <Link to='/work/publication' className='text-dark'>
-                  Read More
-                </Link>
+                <p>Muskaan Publication Catalouge
+                  {/* <Link to='/work/publication' title="Publication" className='text-dark'>
+                    Read More
+                  </Link> */}
+                </p>
+
               </div>
             </Col>
           </Row>
@@ -200,8 +219,6 @@ const Home = React.memo(() => {
                 <source src={video1} type="video/mp4" />
               </video>
             </Col>
-
-
             <Col sm={4} className='py-3'>
               <video width="100%" height="auto" controls>
                 <source src={video2} type="video/mp4" />
@@ -214,7 +231,8 @@ const Home = React.memo(() => {
             </Col>
           </Row>
           <div className="col-lg-12 text-center section-title">
-            <a href="https://www.youtube.com/@muskaanbhopal" target="_blank" className="btn-1">See more</a>
+            <a href="https://www.youtube.com/muskaanbhopal" title="Muskaan Bhopal YouTube Channel" target='_blank' className='btn main-bg text-white'>See more</a>
+
           </div>
         </Container>
       </section>
@@ -231,8 +249,8 @@ const Home = React.memo(() => {
                 <picture>
                   <img data-src={require('../assets/images/blogimg1.jpg')}
                     srcset={require('../assets/images/blogimg1.webp')}
-                    sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px" alt="Description"
-                    width="100%" height="auto" fetchpriority="low" />
+                    alt="Description"
+                    width='416' height='277' fetchpriority="low" />
                 </picture>
 
                 <div className="blog-content" style={{ backgroundColor: '#F5F5F5', color: '#333' }}>
@@ -252,12 +270,10 @@ const Home = React.memo(() => {
             <div className="col-lg-4 padding-15">
               <div className="blog-post">
                 <picture>
-                  <source srcSet={require('../assets/images/blog/blog-2.webp')} type="image/webp" sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 25vw" />
-                  <link rel="preload" as="image" href={require('../assets/images/blog/blog-2.jpg')} />
-                  <img data-src={require('../assets/images/blog/blog-2.webp')}
-                    srcset={require('../assets/images/blog/blog-2.jpg')}
-                    sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px" alt="Description"
-                    className="shadow d-none d-sm-block img-fluid" width='100%' height='auto' fetchpriority="low" />
+                  <img data-src={require('../assets/images/blog/blog-2.jpg')}
+                    srcset={require('../assets/images/blog/blog-2.webp')}
+                    alt="Description"
+                    width='416' height='277' fetchpriority="low" />
                 </picture>
 
                 <div className="blog-content" style={{ backgroundColor: '#F5F5F5', color: '#333' }}>
@@ -279,12 +295,10 @@ const Home = React.memo(() => {
             <div className="col-lg-4 padding-15">
               <div className="blog-post">
                 <picture>
-                  <source srcSet={require('../assets/images/blog/blog-3.webp')} type="image/webp" sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 25vw" />
-                  <link rel="preload" as="image" href={require('../assets/images/blog/blog-3.jpg')} />
-                  <img data-src={require('../assets/images/blog/blog-3.webp')}
+                  <img data-src={require('../assets/images/blog/blog-3.jpg')}
                     srcset={require('../assets/images/blog/blog-3.jpg')}
-                    sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px" alt="Description"
-                    className="shadow d-none d-sm-block img-fluid" width='100%' height='auto' fetchpriority="low" />
+                    alt="Description"
+                    width='416' height='277' fetchpriority="low" />
                 </picture>
 
                 <div className="blog-content" style={{ backgroundColor: '#F5F5F5', color: '#333' }}>
