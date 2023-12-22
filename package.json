@@ -60,6 +60,7 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^8.56.0",
     "webpack-bundle-analyzer": "^4.10.1"
   }
 }

@@ -12,8 +12,7 @@ const MainHeader = () => {
                     <Container>
                         <Navbar.Brand href="/">
                             <picture>
-                                <source srcSet={require('../assets/images/Muskaan-logo.webp')} type="image/webp" className='logo-width' />
-                                <source srcSet={require('../assets/images/Muskaan-logo.avif')} type="image/avif" className='logo-width' />
+                                {/* <source srcSet={require('../assets/images/Muskaan-logo.webp')} type="image/webp" className='logo-width' /> */}
                                 <img  loading="lazy" src={require('../assets/images/Muskaan-logo.png')} alt="Muskaan ngo"
                                     className="img-fluid logo-width"  width='76' height='76'/>
                             </picture>

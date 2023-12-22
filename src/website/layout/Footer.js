@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 import { FaInstagram } from "react-icons/fa";
 import { GrFacebookOption } from "react-icons/gr";
 import { ImYoutube2 } from "react-icons/im";
-
-
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
@@ -22,10 +20,10 @@ const Footer = () => {
             <Col sm={4} xs={12}>
               <div className="footer-box text-center">
                 <picture>
-                  <source srcSet={require('../assets/images/Muskaan-logo.webp')} type="image/webp" />
-                  <source srcSet={require('../assets/images/Muskaan-logo.avif')} type="image/avif" />
+                  {/* <source srcSet={require('../assets/images/Muskaan-logo.webp')} type="image/webp" />
+                  <source srcSet={require('../assets/images/Muskaan-logo.avif')} type="image/avif" /> */}
                   <img loading="lazy" src={require('../assets/images/Muskaan-logo.png')} alt="Muskaan ngo"
-                    className="img-fluid" style={{ width: "25%" }}   width='92' height='92'/>
+                    className="img-fluid" style={{ width: "25%" }} width='92' height='92' />
                 </picture>
                 <p>We have been actively working on this journey with members of denotified tribes and the urban poor since 1998.</p>
                 <hr />

@@ -64,7 +64,7 @@ body {
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important
 }
 
-.about-image img:nth-child(2) {
+.about-image picture:nth-child(2) {
     position: absolute;
     left: 10px;
     bottom: 0;
@@ -574,3 +574,4 @@ span.date {
         padding: 2px 5px !important
     }
 }
+

@@ -8,10 +8,23 @@ import video3 from '../assets/video/video3.mp4'
 import { Helmet } from "react-helmet";
 const Home = React.memo(() => {
   const [slider, setslider] = useState(0);
-
   const handleSelect = (selectedIndex) => {
     setslider(selectedIndex);
   };
+  const redirectToYouTubeChannel = () => {
+    window.open("https://www.youtube.com/muskaanbhopal", '_blank');
+  };
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <div>
       <Helmet>
@@ -22,19 +35,66 @@ const Home = React.memo(() => {
         <meta name="theme-color" content="#E6E6FA" />
       </Helmet>
       <Carousel activeIndex={slider} onSelect={handleSelect} indicators={false}>
-        <Carousel.Item>
+        {/* <Carousel.Item className='for-desktop'>
           <picture>
             <source srcSet={require('../assets/images/sliderImg/muskaan-banner1.webp')} type="image/webp" />
             <link rel="preload" fetchpriority="high" as="image" href={require('../assets/images/sliderImg/muskaan-banner1.jpg')} />
-            <img rel="preload" fetchpriority="high" as="image"
-              data-src={require('../assets/images/sliderImg/muskaan-banner1.webp')}
-              srcset={require('../assets/images/sliderImg/muskaan-banner1.jpg')}
-              alt="Description" className="d-block slider-img"
-              loading="lazy"
+            <img
+              data-src='/static/media/muskaan-banner1.8b611cac23c23c5bd799.webp'
+              srcSet='../assets/images/sliderImg/muskaan-banner1.jpg'
+              alt="Description"
+              className="d-block slider-img"
               width="1900" height="800"
             />
           </picture>
         </Carousel.Item>
+
+
+        <Carousel.Item className='for-mobile'>
+          <picture>
+            <source srcSet={require('../assets/images/sliderImg/muskaan-banner1.webp')} type="image/webp" />
+            <link rel="preload" fetchpriority="high" as="image" href={require('../assets/images/sliderImg/muskaan-banner1.jpg')} />
+            <img
+              data-src='/static/media/muskaan-banner1.8b611cac23c23c5bd799.webp'
+              srcSet='../assets/images/sliderImg/muskaan-banner1.jpg'
+              alt="Description"
+              className="d-block slider-img"
+              width="500" height="500"
+            />
+          </picture>
+        </Carousel.Item> */}
+
+        {isMobile ? (
+          <Carousel.Item className='for-mobile'>
+
+            <picture>
+              <source srcSet={require('../assets/images/sliderImg/muskaan-b-m.webp')} type="image/webp" />
+              <link rel="preload" fetchpriority="high" as="image" href={require('../assets/images/sliderImg/muskaan-b-m.jpg')} />
+              <img
+                data-src='../assets/images/sliderImg/muskaan-b-m.webp.'
+                srcSet='../assets/images/sliderImg/muskaan-b-m.jpg'
+                alt="Description"
+                className="d-block slider-img"
+                width="412" height="135"
+              />
+            </picture>
+          </Carousel.Item>
+        ) : (
+          <Carousel.Item className='for-desktop'>
+            <picture>
+              <source srcSet={require('../assets/images/sliderImg/muskaan-banner1.webp')} type="image/webp" />
+              <link rel="preload" fetchpriority="high" as="image" href={require('../assets/images/sliderImg/muskaan-banner1.jpg')} />
+              <img
+                data-src='/static/media/muskaan-banner1.8b611cac23c23c5bd799.webp'
+                srcSet='../assets/images/sliderImg/muskaan-banner1.jpg'
+                alt="Description"
+                className="d-block slider-img"
+                width="1900" height="800"
+              />
+            </picture>
+          </Carousel.Item>
+        )}
+
 
         <Carousel.Item>
           <picture>
@@ -77,11 +137,17 @@ const Home = React.memo(() => {
                 />
               </picture>
 
-              <img data-src={require('../assets/images/about2.jpg')}
-                srcset={require('../assets/images/about2.webp')}
-                sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px"
-                alt="Description" width="385" height="285"
-                className="shadow imh-fluid" fetchpriority="low" />
+              <picture>
+                <source srcSet={require('../assets/images/about2.webp')} type="image/webp" />
+                <link rel="preload" as="image" href={require('../assets/images/about2.webp')} />
+                <img data-src={require('../assets/images/about2.jpg')}
+                  srcset={require('../assets/images/about2.webp')}
+                  alt="Description"
+                  width="400"
+                  height="300"
+                  class="shadow imh-fluid"
+                  fetchpriority="low" />
+              </picture>
             </div>
           </Col>
         </Row>
@@ -106,7 +172,7 @@ const Home = React.memo(() => {
                     className="img-fluid" fetchpriority="low" />
                 </picture>
                 <h3 className='f-w-6 pt-2'>EDUCATION</h3>
-                <p>More than 90% of children of marginalized communities do not finish school
+                <p>More than 90% of children of marginalized communities do not finish school <br />
                   {/* <Link to='/work/education' title="Education Work" className='text-dark'>
                     Read More
                   </Link> */}
@@ -151,8 +217,8 @@ const Home = React.memo(() => {
             <Col lg={4} className="my-2">
               <div className="work-box">
                 <picture>
-                  <img data-src={require('../assets/images/workimge/livelyhood-2.png')}
-                    srcset={require('../assets/images/workimge/livelyhood-2.png')}
+                  <img data-src={require('../assets/images/workimge/livelyhood.png')}
+                    srcset={require('../assets/images/workimge/livelyhood.png')}
                     sizes="(max-width: 320px) 280px, (max-width: 480px) 440px, 800px" alt="liveLihoods"
                     className="img-fluid" width='352' height='352' fetchpriority="low" />
                 </picture>
@@ -213,12 +279,12 @@ const Home = React.memo(() => {
             </Col>
           </Row>
           <Row>
-
             <Col sm={4} className='py-3'>
               <video width="100%" height="auto" controls>
                 <source src={video1} type="video/mp4" />
               </video>
             </Col>
+
             <Col sm={4} className='py-3'>
               <video width="100%" height="auto" controls>
                 <source src={video2} type="video/mp4" />
@@ -231,8 +297,11 @@ const Home = React.memo(() => {
             </Col>
           </Row>
           <div className="col-lg-12 text-center section-title">
-            <a href="https://www.youtube.com/muskaanbhopal" title="Muskaan Bhopal YouTube Channel" target='_blank' className='btn main-bg text-white'>See more</a>
-
+            {/* <a href="https://www.youtube.com/muskaanbhopal"
+              title="Muskaan Bhopal YouTube Channel" target='_blank'
+              className='btn main-bg text-white'>Visit Muskaan ouTube Channel</a> */}
+            <button onClick={redirectToYouTubeChannel} className='btn main-bg text-white'>Visit Muskaan YouTube Channel
+            </button>
           </div>
         </Container>
       </section>
@@ -247,12 +316,11 @@ const Home = React.memo(() => {
             <div className="col-lg-4 padding-15">
               <div className="blog-post">
                 <picture>
-                  <img data-src={require('../assets/images/blogimg1.jpg')}
-                    srcset={require('../assets/images/blogimg1.webp')}
+                  <img data-src={require('../assets/images/blog/blogimg11.jpg')}
+                    srcset={require('../assets/images/blog/blogimg11.webp')}
                     alt="Description"
                     width='416' height='277' fetchpriority="low" />
                 </picture>
-
                 <div className="blog-content" style={{ backgroundColor: '#F5F5F5', color: '#333' }}>
                   <span className="date" style={{ color: '#000' }}>January 01, 2021</span>
                   <h3>
@@ -270,8 +338,8 @@ const Home = React.memo(() => {
             <div className="col-lg-4 padding-15">
               <div className="blog-post">
                 <picture>
-                  <img data-src={require('../assets/images/blog/blog-2.jpg')}
-                    srcset={require('../assets/images/blog/blog-2.webp')}
+                  <img data-src={require('../assets/images/blog/blog-22.jpg')}
+                    srcset={require('../assets/images/blog/blog-22.webp')}
                     alt="Description"
                     width='416' height='277' fetchpriority="low" />
                 </picture>
