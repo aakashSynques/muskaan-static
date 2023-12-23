@@ -317,7 +317,7 @@ const Home = React.memo(() => {
               <div className="blog-post">
                 <picture>
                   <img data-src={require('../assets/images/blog/blogimg11.jpg')}
-                    srcset={require('../assets/images/blog/blogimg11.webp')}
+                    srcset={require('../assets/images/blog/blogimg11.jpg')}
                     alt="Description"
                     width='416' height='277' fetchpriority="low" />
                 </picture>
@@ -338,8 +338,9 @@ const Home = React.memo(() => {
             <div className="col-lg-4 padding-15">
               <div className="blog-post">
                 <picture>
-                  <img data-src={require('../assets/images/blog/blog-22.jpg')}
-                    srcset={require('../assets/images/blog/blog-22.webp')}
+                  <img
+                    data-src={require('../assets/images/blog/blog-22.jpg')}
+                    srcset={require('../assets/images/blog/blog-22.jpg')}
                     alt="Description"
                     width='416' height='277' fetchpriority="low" />
                 </picture>

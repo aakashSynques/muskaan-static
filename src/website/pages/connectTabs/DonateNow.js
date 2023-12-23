@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {Row, Col, Form, FormControl, Button} from 'react-bootstrap';
+import { Row, Col, Form, FormControl, Button } from 'react-bootstrap';
 import CaptchaComponent from '../../component/CaptchaComponent';
 import { fetch } from '../../../utils';
 const DonateNow = () => {
@@ -7,11 +7,11 @@ const DonateNow = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [headsData, setHeadsData] = useState();
   const [errorMessage, setErrorMessage] = useState('');
-
   const getDonateHeads = async () => {
     try {
       setIsLoading(true);
       const response = await fetch('/donation/heads', 'get', null, null);
+      console.log("asdfasd", response)
       setHeadsData(response.data.data.headList);
       setIsLoading(false);
     } catch (error) {
@@ -21,14 +21,12 @@ const DonateNow = () => {
   useEffect(() => {
     getDonateHeads();
   }, []);
-
   const [selectedItem, setSelectedItem] = useState(null);
   const [customAmount, setCustomAmount] = useState('');
   const [donationAmount, setDonationAmount] = useState(0);
   const handleClick = (index) => {
     if (selectedItem !== index) {
       setCustomAmount('');
-
     }
     setSelectedItem(index);
     if (index === 'other') {
@@ -36,7 +34,6 @@ const DonateNow = () => {
     } else if (headsData && headsData[index]) {
       setDonationAmount(parseFloat(headsData[index].head_amount) || 0);
     }
-
     if (validationErrors.donationAmount) {
       setValidationErrors({ ...validationErrors, donationAmount: '' });
     }
@@ -47,7 +44,6 @@ const DonateNow = () => {
     email: '',
     mobile: '',
     address: '',
-
   });
   const [formData, setFormData] = useState({
     firstName: '',
@@ -56,8 +52,6 @@ const DonateNow = () => {
     mobile: '',
     address: '',
   });
-
-
   const handleAmountChange = (e) => {
     const enteredAmount = parseFloat(e.target.value);
     if (donationAmount !== null && enteredAmount <= donationAmount) {
@@ -67,15 +61,11 @@ const DonateNow = () => {
     }
     setDonationAmount(enteredAmount);
   };
-
   const handleCaptchaChange = (value) => {
-
   };
-
   const validateForm = () => {
     const errors = {};
     let isValid = true;
-
     if (selectedItem !== 'other' && !donationAmount) {
       errors.donationAmount = 'Donation amount is required';
       isValid = false;
@@ -83,12 +73,10 @@ const DonateNow = () => {
       errors.donationAmount = 'Enter donation amount';
       isValid = false;
     }
-
     if (!formData.firstName.trim()) {
       errors.firstName = 'First Name is required';
       isValid = false;
     }
-
     if (!formData.lastName.trim()) {
       errors.lastName = 'Last Name is required';
       isValid = false;
@@ -108,21 +96,16 @@ const DonateNow = () => {
       errors.address = 'Address is required';
       isValid = false;
     }
-
-
     if (!captchaValue) {
       errors.captcha = 'Please complete the reCAPTCHA';
     }
-
     setValidationErrors(errors);
     return isValid;
   };
-
   const isValidEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
-
   const handleSubmit = async () => {
     try {
       if (validateForm()) {
@@ -142,8 +125,6 @@ const DonateNow = () => {
       // Handle errors
     }
   };
-
-
   return (
     <>
       <p><em><strong>Together, let’s make the world one bit better!</strong></em></p>
@@ -152,24 +133,27 @@ const DonateNow = () => {
         <h5 className="mb-0 p-0"> <strong>Choose Contribution Amount <span className='text-danger'>*</span> </strong></h5>
 
         {headsData?.map((i, index) => (
-          <li key={index}>
-            <label
-              className={`daily-anadhaanam acc ${selectedItem === index ? 'acc-active' : ''}`}
-              onClick={() => handleClick(index)}
-            >
-              <input
-                type="radio"
-                name="donationOption"
-                value={index}
-                checked={selectedItem === index}
-                onChange={() => handleClick(index)}
-              />
-              <div className="daily-text">{i.head_name}</div>
-              <span className="daily-amt">
-                &nbsp; <strong>₹ {i.head_amount}</strong>
-              </span>
-            </label>
-          </li>
+          // Check if dispaly_status is true before rendering the list item
+          i.display_status && (
+            <li key={index}>
+              <label
+                className={`daily-anadhaanam acc ${selectedItem === index ? 'acc-active' : ''}`}
+                onClick={() => handleClick(index)}
+              >
+                <input
+                  type="radio"
+                  name="donationOption"
+                  value={index}
+                  checked={selectedItem === index}
+                  onChange={() => handleClick(index)}
+                />
+                <div className="daily-text">{i.head_name}</div>
+                <span className="daily-amt">
+                  &nbsp; <strong>₹ {i.head_amount}</strong>
+                </span>
+              </label>
+            </li>
+          )
         ))}
 
         <li>
@@ -195,7 +179,6 @@ const DonateNow = () => {
             />
           </label>
         </li>
-
         {selectedItem !== null && selectedItem !== 'other' && (
           <div className='mt-2'>
             <strong style={{ fontSize: '17px' }}>{selectedItem === 'other' ? 'other' : headsData[selectedItem]?.head_name} : </strong>
@@ -207,15 +190,11 @@ const DonateNow = () => {
             {errorMessage && <div style={{ color: 'red' }}>{errorMessage}</div>}
           </div>
         )}
-
-
         {validationErrors.donationAmount && (
           <p className="error text-danger m-0">{validationErrors.donationAmount}</p>
         )}
-
         <h6 className='py-2 mt-4 main-color'>Your contribution amount: <i className="fa fa-inr"></i> {donationAmount || customAmount || 0}</h6>
       </div>
-
       <div className='parsnal-info'>
         <hr />
         <h5 className='mb-0 p-0'>
@@ -258,9 +237,7 @@ const DonateNow = () => {
                 }}
               />
               {validationErrors.lastName && <p className="error text-danger m-0">{validationErrors.lastName}</p>}
-
             </Form.Group>
-
             <Form.Group className="mb-3" as={Col} md="6">
               <FormControl
                 type='email'
@@ -276,11 +253,9 @@ const DonateNow = () => {
                     email: value.trim() ? '' : 'Email is required',
                   }));
                 }}
-
               />
               {validationErrors.email && <p className="error text-danger m-0">{validationErrors.email}</p>}
             </Form.Group>
-
             <Form.Group className="mb-3" as={Col} md="6">
               <FormControl
                 type='number'
@@ -317,15 +292,11 @@ const DonateNow = () => {
                 }}
               />
               {validationErrors.address && <p className="error text-danger m-0">{validationErrors.address}</p>}
-
             </Form.Group>
-
             <Form.Group className="mb-3">
               <CaptchaComponent onChange={handleCaptchaChange} />
-
               {validationErrors.captcha && <p className="error text-danger">{validationErrors.captcha}</p>}
             </Form.Group>
-
             <Form.Group as={Col} md="5">
               <Button
                 className='rounded-1 px-5 py-2 btn btn-primary-1 px-5 py-2'
