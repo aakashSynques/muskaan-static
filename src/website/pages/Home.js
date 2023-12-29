@@ -77,7 +77,7 @@ const Home = React.memo(() => {
                 srcSet='../assets/images/sliderImg/muskaan-b-m.jpg'
                 alt="Description"
                 className="d-block slider-img"
-                width="412" height="135"
+                width="100%" height="auto"
               />
             </picture>
           </Carousel.Item>
@@ -85,13 +85,13 @@ const Home = React.memo(() => {
           <Carousel.Item className='for-desktop'>
             <picture>
               <source srcSet={require('../assets/images/sliderImg/muskaan-banner1.webp')} type="image/webp" />
-              <link rel="preload" fetchpriority="high" as="image" href={require('../assets/images/sliderImg/muskaan-banner1.jpg')} />
+              <link rel="preload" fetchpriority="high" as="image" href={require('../assets/images/sliderImg/b2.jpg')} />
               <img
                 data-src='/static/media/muskaan-banner1.8b611cac23c23c5bd799.webp'
-                srcSet='../assets/images/sliderImg/muskaan-banner1.jpg'
+                srcSet='../assets/images/sliderImg/b2.jpg'
                 alt="Description"
                 className="d-block slider-img"
-                width="1900" height="800"
+                width="100%" height="auto"
               />
             </picture>
           </Carousel.Item>
@@ -108,7 +108,7 @@ const Home = React.memo(() => {
               data-src={require('../assets/images/sliderImg/slider2.webp')}
               srcset={require('../assets/images/sliderImg/slider2.jpg')}
               alt="Description" className="d-block slider-img"
-              width="1900" height="800"
+              width="100%" height="auto"
             />
           </picture>
         </Carousel.Item>
