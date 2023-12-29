@@ -181,7 +181,8 @@ span.date {
 }
 
 .connect-bg {
-    background: linear-gradient(179deg, rgba(146, 46, -19, -37), #ff0004) top fixed, url(../images/contactbenner.jpg) top fixed;
+    /* background: linear-gradient(179deg, rgba(146, 46, -19, -37), #ff0004) top fixed, url(../images/contactbenner.jpg) top fixed; */
+background: url(../images/contactbenner.jpg) top fixed;
     padding: 140px 0
 }
 
@@ -226,7 +227,7 @@ span.date {
 
 .communication-tab .nav-link {
     color: #7e1502 !important;
-    font-weight: 700 !important;
+    font-weight: 500 !important;
     font-size: 17px
 }
 
@@ -398,15 +399,16 @@ span.date {
 }
 
 .acc-active {
-    background-color: var(--primary-color);
-    color: var(--white-text);
+    background-color: #ebf2f5;
+    color: #7e1502;
     border: 1px solid #7e154b;
     outline: 0
 }
 
 .acc-input-place::placeholder {
-    color: #fff;
-    opacity: 1
+    color: gray;
+    opacity: 1;
+    font-size: 10px!important;
 }
 
 .acc-input-place ::-ms-input-placeholder {

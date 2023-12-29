@@ -33,6 +33,7 @@ const Career = () => {
         }
     };
 
+
     const handleCaptchaChange = (value) => {
         setCaptchaValue(value);
     };
@@ -73,23 +74,21 @@ const Career = () => {
     };
     const submitContact = async () => {
         try {
-            setIsSubmitting(true); // Set loading state to true
+            setIsSubmitting(true);
 
             if (validateForm()) {
-                const body = {
-                    full_name: formData.fullName,
-                    email: formData.email,
-                    phoneNo: formData.phoneNo,
-                    city: formData.city,
-                    address: formData.address,
-                    state: formData.state,
-                    pincode: formData.pincode,
-                    file: formData.file,
-                };
-                // console.log([...body.entries()]);
-
-                const response = await fetch('/form/save-career', 'POST', body, null);
+                const formDataObject = new FormData();
+                formDataObject.append(formData.fullName);
+                formDataObject.append( formData.email);
+                formDataObject.append(formData.phoneNo);
+                formDataObject.append(formData.city);
+                formDataObject.append(formData.address);
+                formDataObject.append(formData.state);
+                formDataObject.append(formData.pincode);
+                formDataObject.append(formData.file);
+                const response = await fetch('/form/save-career', 'POST', formDataObject, null);
                 if (response.data) {
+                    // Reset form data, captcha, errors, etc. on success
                     setFormData({
                         fullName: '',
                         email: '',
@@ -103,8 +102,6 @@ const Career = () => {
                     setCaptchaValue(null);
                     setErrors({});
                     setSubmitSuccess(true);
-                } else {
-                    console.log('')
                 }
             }
         } catch (error) {
@@ -113,14 +110,10 @@ const Career = () => {
             setIsSubmitting(false);
         }
     };
-
     return (
         <div>
             <Container>
-                <div className='text-center'>
-                    <h3 className='main-color'>Career Plan in Muskaan NGO</h3>
-                    <p>We are always looking for new and exciting talent to join our team. If you are interested to work with us, please drop us an e-mail with your resume and a brief statement on why you are interested to work with us and how your skills can benefit Muskaan. The more information you provide about yourself (i.e availability, expectations etc), the better we will be able to respond to you. If you are applying for an advertised position, please state this clearly in your communication with us.</p>
-                </div>
+
                 <Row>
                     <Col sm={5}>
                         <Image src='https://www.nityango.org/wp-content/uploads/2023/06/Top-sites-to-give-an-edge-to-your-career.png' alt="muskaan" className='w-100' />
@@ -212,10 +205,12 @@ const Career = () => {
                                     type='file'
                                     className='contact-input'
                                     name='file'
+                                    accept='.pdf'
                                     onChange={handleChange}
                                 />
                                 {errors.file && <p className="error text-danger m-0">{errors.file}</p>}
                             </Form.Group>
+
 
                             {/* 
                             <Form.Group className="mb-3">
@@ -248,3 +243,24 @@ const Career = () => {
 };
 
 export default Career;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

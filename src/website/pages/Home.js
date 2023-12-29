@@ -11,9 +11,11 @@ const Home = React.memo(() => {
   const handleSelect = (selectedIndex) => {
     setslider(selectedIndex);
   };
+  
   const redirectToYouTubeChannel = () => {
     window.open("https://www.youtube.com/muskaanbhopal", '_blank');
   };
+
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   useEffect(() => {
     const handleResize = () => {
@@ -136,6 +138,9 @@ const Home = React.memo(() => {
                   className="shadow d-none d-sm-block img-fluid" fetchpriority="low"
                 />
               </picture>
+
+
+     
 
               <picture>
                 <source srcSet={require('../assets/images/about2.webp')} type="image/webp" />

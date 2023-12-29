@@ -5,23 +5,43 @@ import Footer from './website/layout/Footer';
 import NotFound from './website/component/NotFound';
 import './website/assets/css/style.css'
 // const Home = lazy(() => import('./website/pages/Home'));
-import Home from './website/pages/Home'
-const About = lazy(() => import('./website/pages/aboutPages/About'));
-const Connect = lazy(() => import('./website/pages/Connect'));
-const Education = lazy(() => import('./website/pages/work/Education'));
-const Communicable = lazy(() => import('./website/pages/communicables/Communicable'));
-const Empowering = lazy(() => import('./website/pages/work/Empowering'));
-const IssuesOfDignity = lazy(() => import('./website/pages/work/IssuesOfDignity'));
-const Livelihood = lazy(() => import('./website/pages/work/Livelihood'));
-const SustainableLiving = lazy(() => import('./website/pages/work/SustainableLiving'));
-const Publication = lazy(() => import('./website/pages/work/Publication'));
-const History = lazy(() => import('./website/pages/aboutPages/History'));
-const Mission = lazy(() => import('./website/pages/aboutPages/Mission'));
-const WhoWeWork = lazy(() => import('./website/pages/aboutPages/WhoWeWork'));
-const Policies = lazy(() => import('./website/pages/aboutPages/Policies'));
-const OurTeam = lazy(() => import('./website/pages/aboutPages/OurTeam'));
-const Collaborations = lazy(() => import('./website/pages/aboutPages/Collaborations'));
-const Financial = lazy(() => import('./website/pages/aboutPages/Financial'));
+// import Home from './website/pages/Home'
+// const About = lazy(() => import('./website/pages/aboutPages/About'));
+// const Connect = lazy(() => import('./website/pages/Connect'));
+// const Education = lazy(() => import('./website/pages/work/Education'));
+// const Communicable = lazy(() => import('./website/pages/communicables/Communicable'));
+// const Empowering = lazy(() => import('./website/pages/work/Empowering'));
+// const IssuesOfDignity = lazy(() => import('./website/pages/work/IssuesOfDignity'));
+// const Livelihood = lazy(() => import('./website/pages/work/Livelihood'));
+// const SustainableLiving = lazy(() => import('./website/pages/work/SustainableLiving'));
+// const Publication = lazy(() => import('./website/pages/work/Publication'));
+// const History = lazy(() => import('./website/pages/aboutPages/History'));
+// const Mission = lazy(() => import('./website/pages/aboutPages/Mission'));
+// const WhoWeWork = lazy(() => import('./website/pages/aboutPages/WhoWeWork'));
+// const Policies = lazy(() => import('./website/pages/aboutPages/Policies'));
+// const OurTeam = lazy(() => import('./website/pages/aboutPages/OurTeam'));
+// const Collaborations = lazy(() => import('./website/pages/aboutPages/Collaborations'));
+// const Financial = lazy(() => import('./website/pages/aboutPages/Financial'));
+
+import Home from './website/pages/Home';
+import About from './website/pages/aboutPages/About';
+import Connect from './website/pages/Connect';
+import Education from './website/pages/work/Education';
+import Communicable from './website/pages/communicables/Communicable';
+import Empowering from './website/pages/work/Empowering';
+import IssuesOfDignity from './website/pages/work/IssuesOfDignity';
+import Livelihood from './website/pages/work/Livelihood';
+import SustainableLiving from './website/pages/work/SustainableLiving';
+import Publication from './website/pages/work/Publication';
+import History from './website/pages/aboutPages/History';
+import Mission from './website/pages/aboutPages/Mission';
+import WhoWeWork from './website/pages/aboutPages/WhoWeWork';
+import Policies from './website/pages/aboutPages/Policies';
+import OurTeam from './website/pages/aboutPages/OurTeam';
+import Collaborations from './website/pages/aboutPages/Collaborations';
+import Financial from './website/pages/aboutPages/Financial';
+import ThankYou from './website/pages/connectTabs/ThankYou';
+
 
 function App() {
   return (
@@ -46,6 +66,7 @@ function App() {
           <Route path='/work/sustainable-living' element={<SustainableLiving />} />
           <Route path='/work/publication' element={<Publication />} />
           <Route path='/communicable' element={<Communicable />} />
+          <Route path='/thankyou' element={<ThankYou />} />
           <Route path='/*' element={<NotFound />} />
         </Routes>
       </Suspense>
