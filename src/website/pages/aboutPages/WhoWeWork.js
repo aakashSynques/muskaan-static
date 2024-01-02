@@ -4,15 +4,13 @@
 import React from 'react'
 import { Container, Col, Row } from 'react-bootstrap'
 import AboutSideBar from './AboutSideBar'
+import PageTitle from '../../component/PageTitle'
 
 const WhoWeWork = () => {
     return (
         <>
-            <div className='connect-bg fixed-bg'>
-                <Container className='text-center text-white'>
-                    <h1>Who We Work With</h1>
-                </Container>
-            </div>
+        
+            <PageTitle pageTitle="Who We Work With" />
             <div className='bgpettern pb-5'>
                 <Container className='pt-4'>
                     <h4>Who We Work With</h4>

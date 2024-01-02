@@ -9,7 +9,7 @@ const ThankYou = () => {
                     <Col sm={3}></Col>
                     <Col sm={6}>
                     <h1 className='mt-5'>Thank You !</h1>
-                    <p style={{    fontSize: "20px"}}>Thank you for contribution <span className='main-color'>muskaan ngo. </span> You will <br></br> recived and email message shortly.</p>
+                    <p style={{    fontSize: "20px"}}>Thank you for contribution <span className='main-color text-uppercase'>muskaan ngo. </span> You will <br></br> recived and email message shortly.</p>
                     <Image src={require('../../assets/images/cheked.png')} alt="" className='img-fluid rounded-2 pb-2' style={{    width: "40%"}}/>
                     <h3>Check your Email</h3>
                     <p>If you didn't recived any mail contect <span className='main-color'>muskaan@muskaan.org</span></p>

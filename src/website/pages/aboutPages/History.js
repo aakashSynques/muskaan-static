@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Col, Row, Tab, Tabs, Image } from 'react-bootstrap'
 import AboutSideBar from './AboutSideBar'
 import { Helmet } from "react-helmet";
+import PageTitle from '../../component/PageTitle';
 const History = () => {
   return (
     <>
@@ -13,11 +14,13 @@ const History = () => {
         <meta name="theme-color" content="#E6E6FA" />
       </Helmet>
 
-      <div className='connect-bg fixed-bg'>
+      {/* <div className='connect-bg fixed-bg'>
         <Container className='text-center text-white'>
           <h1>History</h1>
         </Container>
-      </div>
+      </div> */}
+
+            <PageTitle pageTitle="History" />
       <div className='bgpettern pb-5'>
         <Container className='pt-4'>
           <h4>Our History</h4>
@@ -37,10 +40,10 @@ const History = () => {
               >
                 <Tab eventKey="tab1" title="1997-1998">
                   <Row>
-                    <Col lg={5} md={12}>
+                    {/* <Col lg={5} md={12}>
                       <Image src={require('../../assets/images/histry1.jpg')} alt="" className='img-fluid rounded-2 pb-2' />
-                    </Col>
-                    <Col lg={7} md={12}>
+                    </Col> */}
+                    <Col lg={12} md={12}>
                       <h4 className='main-color'>1997 - 1998: Commitment to Education</h4>
                       <p>In 1997, we began with the goal of enrolling marginalized children in the formal schooling system by preparing them for admissions in age-appropriate classes. Over time, we recognized that sending these children to school was merely a small part of a broader and longer journey towards any meaningful and substantial transformation in their lives. During this period, we continually got a better understanding of what the formal schooling experience had to offer to the children from the marginalized Adivasi communities.</p>
                     </Col>
@@ -48,10 +51,10 @@ const History = () => {
                 </Tab>
                 <Tab eventKey="tab2" title="1998-2005">
                   <Row>
-                    <Col sm={5}>
+                    {/* <Col sm={5}>
                       <Image src={require('../../assets/images/history2.jpg')} alt="" className='img-fluid rounded-2 pb-2' />
-                    </Col>
-                    <Col sm={7}>
+                    </Col> */}
+                    <Col sm={12}>
                       <h4 className='main-color'>1998 – 2005: Challenging Educational Barriers and Seeking Solutions</h4>
                       <p>Despite ensuring a smooth transition of our children into schools and providing them constant support in terms of academics, provisions of uniforms and other supplies, children only experienced rebuke and disrespect. Instead of gaining confidence and education through the formal schooling experience, children were becoming quiet and subservient. Eventually we concluded that schooling experiences differed based on social and economic standing.</p>
                       <p>Children from marginalized communities like Pardhis and Gonds come with a lot of trauma and challenges because of systemic issues.
@@ -66,10 +69,10 @@ const History = () => {
                 </Tab>
                 <Tab eventKey="tab3" title="2005-2015">
                   <Row>
-                    <Col sm={5}>
+                    {/* <Col sm={5}>
                       <Image src={require('../../assets/images/history3.jpg')} alt="" className='img-fluid rounded-2 pb-2' />
-                    </Col>
-                    <Col sm={7}>
+                    </Col> */}
+                    <Col sm={12}>
                       <h4 className='main-color'>2005 – 2015: Empowering Education and Community Development Initiatives</h4>
                       <em>Now, many grassroots realities were being tackled by us:</em>
                       <h6 className='pt-2'>Education:</h6>
@@ -106,10 +109,10 @@ const History = () => {
                 </Tab>
                 <Tab eventKey="tab4" title="2015-2019">
                   <Row>
-                    <Col sm={5}>
+                    {/* <Col sm={5}>
                       <Image src={require('../../assets/images/history4.jpg')} alt="" className='img-fluid rounded-2 pb-2' />
-                    </Col>
-                    <Col sm={7}>
+                    </Col> */}
+                    <Col sm={12}>
                       <h4 className='main-color'>2015 – 2019: Strategic Community Interventions & Multi-Faceted Initiatives</h4>
 
                       <p><strong>Child Protection : </strong>
@@ -129,10 +132,10 @@ const History = () => {
                 </Tab>
                 <Tab eventKey="tab5" title="2019-2023">
                   <Row>
-                    <Col sm={5}>
+                    {/* <Col sm={5}>
                       <Image src={require('../../assets/images/history5.jpg')} alt="" className='img-fluid rounded-2 pb-2' />
-                    </Col>
-                    <Col sm={7}>
+                    </Col> */}
+                    <Col sm={12}>
                       <h4 className='main-color'>2019-2023: Education, Community Interventions & Functionary Sensitization</h4>
                       <h6>COVID : </h6>
                       <ul>

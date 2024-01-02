@@ -10,6 +10,7 @@ import policies5 from '../../assets/pdfFile/Whistle blower policy.pdf'
 import { FaDownload } from "react-icons/fa";
 
 import { Helmet } from "react-helmet";
+import PageTitle from '../../component/PageTitle'
 
 const Policies = () => {
     return (
@@ -21,11 +22,8 @@ const Policies = () => {
                 <meta name="description" content="muskaan ngo" />
                 <meta name="theme-color" content="#E6E6FA" />
             </Helmet>
-            <div className='connect-bg fixed-bg'>
-                <Container className='text-center'>
-                    {/* <h1>Connect</h1> */}
-                </Container>
-            </div>
+            <PageTitle pageTitle="Policies" />
+
             <div className='bgpettern pb-5'>
                 <Container className='pt-4'>
                     <h4>Policies</h4>

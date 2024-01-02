@@ -2,11 +2,15 @@ import React, { useState } from 'react'
 import { Container, Row, Col, Form, FormControl, Button } from 'react-bootstrap'
 import { fetch } from '../../../utils';
 import CaptchaComponent from '../../component/CaptchaComponent';
-
+import { useNavigate } from 'react-router-dom';
 const Contect = () => {
+  const navigate = useNavigate();
   const [captchaValue, setCaptchaValue] = useState(null);
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false); // Add loading state
+
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [formData, setFormData] = useState({
     fullName: '',
@@ -72,15 +76,28 @@ const Contect = () => {
           setCaptchaValue(null);
           setErrors({});
           setSubmitSuccess(true);
+          navigate('/thank-you')
 
-          console.log('Submitted successfully');
         } else {
           alert('Error submitting form:', response.error);
         }
       }
-    } catch (error) {
-      // Handle any unexpected errors
-      setIsSubmitting(false); // Reset loading state
+    }
+    // catch (error) {
+    //   // Handle any unexpected errors
+    //   setIsSubmitting(false); // Reset loading state
+    // }
+    catch (error) {
+      if (error.response && error.response.data && error.response.data.message) {
+        setErrorMessage(<font color="red"><b>{error.response.data.message}</b></font>);
+      } else if (error && error.message) {
+        setErrorMessage(<font color="red"><b>{error.message}</b></font>);
+      } else {
+        setErrorMessage(<font color="red"><b>Something went wrong.</b></font>);
+      }
+      setIsSubmitting(false);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -231,6 +248,7 @@ const Contect = () => {
                   {submitSuccess && (
                     <h6 className="text-success">Form submitted successfully!</h6>
                   )}
+                      <font color="red" size='2' >{errorMessage}</font>
                 </Form.Group>
               </Row>
             </Form>

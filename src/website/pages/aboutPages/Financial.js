@@ -9,6 +9,7 @@ import myPdf5 from '../../assets/pdfFile/FCRA Q2 July - Sept 2023.pdf'
 import myPdf6 from '../../assets/pdfFile/FCRA Q3 Oct - Dec 2022.pdf'
 import { FaCheck } from "react-icons/fa6";
 import { Helmet } from "react-helmet";
+import PageTitle from '../../component/PageTitle'
 const Financial = () => {
     return (
         <>
@@ -19,11 +20,7 @@ const Financial = () => {
                 <meta name="description" content="muskaan ngo" />
                 <meta name="theme-color" content="#E6E6FA" />
             </Helmet>
-            <div className='connect-bg fixed-bg'>
-                <Container className='text-center text-white'>
-                    <h1>Connect</h1>
-                </Container>
-            </div>
+            <PageTitle pageTitle="Financial" />
             <div className='bgpettern pb-5'>
                 <Container className='pt-4'>
                     <h4>Financials</h4>

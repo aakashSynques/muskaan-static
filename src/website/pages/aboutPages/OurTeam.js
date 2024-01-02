@@ -5,6 +5,7 @@ import React from 'react'
 import { Container, Col, Row } from 'react-bootstrap'
 import AboutSideBar from './AboutSideBar'
 import { Helmet } from "react-helmet";
+import PageTitle from '../../component/PageTitle';
 const OurTeam = () => {
     return (
         <>
@@ -15,11 +16,12 @@ const OurTeam = () => {
                 <meta name="description" content="muskaan ngo" />
                 <meta name="theme-color" content="#E6E6FA" />
             </Helmet>
-            <div className='connect-bg fixed-bg'>
+            {/* <div className='connect-bg fixed-bg'>
                 <Container className='text-center text-white'>
                     <h1>Our Team</h1>
                 </Container>
-            </div>
+            </div> */}
+            <PageTitle pageTitle="Our Team" />
             <div className='bgpettern pb-5'>
                 <Container className='pt-4'>
                     <h4>Our Team</h4>

@@ -3,6 +3,7 @@ import React from 'react'
 import { Container, Col, Row, Card } from 'react-bootstrap'
 import AboutSideBar from './AboutSideBar'
 import { Helmet } from "react-helmet";
+import PageTitle from '../../component/PageTitle';
 const About = () => {
   return (
     <>
@@ -13,11 +14,14 @@ const About = () => {
         <meta name="description" content="muskaan ngo" />
         <meta name="theme-color" content="#E6E6FA" />
       </Helmet>
-      <div className='connect-bg fixed-bg'>
+
+      {/* <div className='connect-bg fixed-bg'>
         <Container className='text-center text-white'>
           <h1>About Us</h1>
         </Container>
-      </div>
+      </div> */}
+      <PageTitle pageTitle="About Us" />
+
       <div className='bgpettern pb-5'>
         <Container className='pt-4'>
           <h4>About</h4>

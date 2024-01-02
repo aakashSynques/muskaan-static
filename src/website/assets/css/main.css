@@ -437,6 +437,43 @@ background: url(../images/contactbenner.jpg) top fixed;
     border: 1px solid #cf4520;
     padding: 10px 7px
 }
+
+
+/* 
+ 
+
+@media screen and (min-device-width: 768px) 
+    and (max-device-width: 1024px) {
+        .b-slider{
+            width: 100%;
+            height: auto;
+        }
+}
+
+@media only screen and (max-width:1200px ) {
+    .b-slider{
+        height: 800!important;
+        width:1900!important;
+    }
+}
+
+@media screen and (min-device-width: 1024px) 
+    and (max-device-width: 1200px) {
+        .b-slider{
+            height: 800;
+            width:1900;
+        }
+}
+  */
+
+
+  .responsive-img {
+    width: 100%;
+    height: auto;
+  }
+
+
+
 @media only screen and (max-width:799px) {
     .logo-width {
         width: 54px !important;
@@ -503,11 +540,11 @@ background: url(../images/contactbenner.jpg) top fixed;
         font-size: 15px
     }
 
-    .slider-img {
+    /* .slider-img {
         height: 135px !important;
         width: 100%;
 
-    }
+    } */
 
     .navbar-toggler {
         font-size: 11px !important;
