@@ -614,3 +614,20 @@ background: url(../images/contactbenner.jpg) top fixed;
     }
 }
 
+.collebration-logo{
+    padding: 7px 74px;
+}
+
+.collebration-card .card-body{
+    border-top: 2px solid #c92305;
+    box-shadow: -1px 3px 6px 6px #80808075;
+    border-radius: 2px;
+}
+.btn-link1{
+    font-weight: 600!important;
+    color: #a31c04!important;
+    text-decoration: underline!important;
+}
+.collebration-card .card{
+    height: 475px;
+}

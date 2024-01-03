@@ -105,14 +105,14 @@ const Home = React.memo(() => {
         ) : (
           <Carousel.Item className='for-desktop'>
             <picture>
-              <source srcSet={require('../assets/images/sliderImg/b2-web.webp')} type="image/webp"        className="responsive-img"/>
-              <link rel="preload" fetchpriority="high" as="image" href={require('../assets/images/sliderImg/b2.jpg')}  className="responsive-img"/>
+              <source srcSet={require('../assets/images/sliderImg/b2-web.webp')} type="image/webp" className="responsive-img" />
+              <link rel="preload" fetchpriority="high" as="image" href={require('../assets/images/sliderImg/b2.jpg')} className="responsive-img" />
               <img
                 data-src='/static/media/b2-web.webp'
                 srcSet='../assets/images/sliderImg/b2.jpg'
                 alt="Description"
                 className=" responsive-img"
-  
+
               />
             </picture>
           </Carousel.Item>
@@ -121,16 +121,16 @@ const Home = React.memo(() => {
 
         <Carousel.Item>
           <picture>
-            <source srcSet={require('../assets/images/sliderImg/b1-web.webp')} type="image/webp"  className=" responsive-img"/>
+            <source srcSet={require('../assets/images/sliderImg/b1-web.webp')} type="image/webp" className=" responsive-img" />
             <link rel="preload" fetchpriority="high" as="image"
               href={require('../assets/images/sliderImg/b1-web.webp')} />
 
             <img rel="preload" fetchpriority="high" as="image"
               data-src={require('../assets/images/sliderImg/b1-web.webp')}
               srcset={require('../assets/images/sliderImg/b1.jpg')}
-              alt="Description"                 className=" responsive-img"
-              
-             />
+              alt="Description" className=" responsive-img"
+
+            />
           </picture>
         </Carousel.Item>
 
@@ -153,14 +153,14 @@ const Home = React.memo(() => {
         ) : (
           <Carousel.Item className='for-desktop'>
             <picture>
-              <source srcSet={require('../assets/images/sliderImg/b1-web.webp')} type="image/webp"        className="responsive-img"/>
-              <link rel="preload" fetchpriority="high" as="image" href={require('../assets/images/sliderImg/b1.jpg')}  className="responsive-img"/>
+              <source srcSet={require('../assets/images/sliderImg/b1-web.webp')} type="image/webp" className="responsive-img" />
+              <link rel="preload" fetchpriority="high" as="image" href={require('../assets/images/sliderImg/b1.jpg')} className="responsive-img" />
               <img
                 data-src='/static/media/b1-web.webp'
                 srcSet='../assets/images/sliderImg/b1.jpg'
                 alt="Description"
                 className=" responsive-img"
-  
+
               />
             </picture>
           </Carousel.Item>
@@ -216,7 +216,6 @@ const Home = React.memo(() => {
           <Row>
             <Col lg={12} className="text-center section-title">
               <h2>Our Work</h2>
-              <p>We work in a wide range of areas to maximize the impact we can create.</p>
             </Col>
           </Row>
 
@@ -231,10 +230,10 @@ const Home = React.memo(() => {
                     className="img-fluid" fetchpriority="low" />
                 </picture>
                 <h3 className='f-w-6 pt-2'>EDUCATION</h3>
-                <p>More than 90% of children of marginalized communities do not finish school 
-       
-                </p>  
-                <button className='btn' onClick={work1}>Read More</button>             
+                <p>More than 90% of children of marginalized communities do not finish school
+
+                </p>
+                <button className='btn btn-link1' onClick={work1}>Read More..</button>
               </div>
             </Col>
 
@@ -248,12 +247,12 @@ const Home = React.memo(() => {
                 </picture>
                 <h3 className='f-w-6 pt-2'>EMPOWERING CHILDREN AND YOUTH</h3>
                 <p>We believe that with the kind of energy that youth contains
-                 
+
                 </p>
                 {/* <Link to='/work/empowering-children-and-youth' title="Empowering Children" className='text-dark'>
                     Read More
                   </Link> */}
-                      <button className='btn' onClick={work2}>Read More</button>         
+                <button className='btn btn-link1' onClick={work2}>Read More ..</button>
               </div>
             </Col>
 
@@ -271,7 +270,7 @@ const Home = React.memo(() => {
                     Read More
                   </Link> */}
                 </p>
-                <button className='btn' onClick={work3}>Read More</button>   
+                <button className='btn btn-link1' onClick={work3}>Read More..</button>
               </div>
             </Col>
 
@@ -290,7 +289,7 @@ const Home = React.memo(() => {
                     Read More
                   </Link> */}
                 </p>
-                <button className='btn' onClick={work4}>Read More</button>  
+                <button className='btn btn-link1' onClick={work4}>Read More..</button>
               </div>
             </Col>
 
@@ -308,7 +307,7 @@ const Home = React.memo(() => {
                     Read More
                   </Link> */}
                 </p>
-                <button className='btn' onClick={work5}>Read More</button>  
+                <button className='btn btn-link1' onClick={work5}>Read More..</button>
               </div>
             </Col>
             <Col lg={4} className="my-2">
@@ -325,7 +324,7 @@ const Home = React.memo(() => {
                     Read More
                   </Link> */}
                 </p>
-                <button className='btn' onClick={work6}>Read More</button>  
+                <button className='btn btn-link1' onClick={work6}>Read More..</button>
               </div>
             </Col>
           </Row>

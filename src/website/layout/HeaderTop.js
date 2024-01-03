@@ -11,7 +11,7 @@ function HeaderTop() {
               <ul className="m-0 p-0">
                 <li className='pt-1'>
                   <a href="#" className='text-white text-decoration-none'>
-                    <FaEnvelope /> muskaan@muskaan.org
+                    <FaEnvelope /> contact@muskaan.org
                   </a>
                 </li>
               </ul>

@@ -3,6 +3,9 @@ import { Container, Row, Col, Form, FormControl, Button } from 'react-bootstrap'
 import { fetch } from '../../../utils';
 import CaptchaComponent from '../../component/CaptchaComponent';
 import { useNavigate } from 'react-router-dom';
+import { FaInstagram } from "react-icons/fa";
+import { GrFacebookOption } from "react-icons/gr";
+import { ImYoutube2 } from "react-icons/im";
 const Contect = () => {
   const navigate = useNavigate();
   const [captchaValue, setCaptchaValue] = useState(null);
@@ -174,11 +177,11 @@ const Contect = () => {
             </div>
 
             <div className='contact-social-icon'>
-              <a href="#" className="fa fa-facebook text-white p-3 m-1" style={{ background: "#3B5998" }}></a>
-              <a href="#" className="fa fa-twitter text-white p-3 m-1" style={{ background: "#55ACEE" }}></a>
-              <a href="#" className="fa fa-instagram text-white p-3 m-1" style={{ background: "#125688" }}></a>
-              <a href="#" className="fa fa-youtube text-white p-3 m-1" style={{ background: "#bb0000" }}></a>
-            </div>
+              {/* <a href="#" className="fa fa-facebook text-white p-3 m-1" style={{ background: "#3B5998" }}></a>
+              <a href="#" className="fa fa-twitter text-white p-3 m-1" style={{ background: "#55ACEE" }}></a> */}
+              <a href="https://www.instagram.com/muskaanbhopal" className="fa fa-instagram text-white p-2 m-1 rounded-1" style={{ background: "#125688" }}><FaInstagram /></a>
+              <a href="https://youtube.com/@muskaanbhopal" className="fa fa-youtube text-white p-2 m-1 rounded-1" style={{ background: "#bb0000" }}> <ImYoutube2 /></a>
+              <a href="https://www.instagram.com/muskaanbooks" className="fa fa-instagram text-white p-2 m-1 rounded-1" style={{ background: "#125688" }}><FaInstagram /></a>            </div>
 
           </Col> <Col sm={1}></Col>
           <Col sm={6}>
@@ -248,7 +251,7 @@ const Contect = () => {
                   {submitSuccess && (
                     <h6 className="text-success">Form submitted successfully!</h6>
                   )}
-                      <font color="red" size='2' >{errorMessage}</font>
+                  <font color="red" size='2' >{errorMessage}</font>
                 </Form.Group>
               </Row>
             </Form>

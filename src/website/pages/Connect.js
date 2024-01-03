@@ -9,7 +9,9 @@ import Volunteer from './connectTabs/Volunteer';
 import DonateNow from './connectTabs/DonateNow';
 import Jobs from './connectTabs/Jobs';
 import { Helmet } from "react-helmet";
-
+import { FaInstagram } from "react-icons/fa";
+import { GrFacebookOption } from "react-icons/gr";
+import { ImYoutube2 } from "react-icons/im";
 
 
 const Connect = () => {
@@ -49,8 +51,14 @@ const Connect = () => {
               <Volunteer />
             </Tab>
             <Tab eventKey="tree" title="Social Media">
-              {/* <Career /> */}
-              Social Media
+           
+            <div className='contact-social-icon'>
+              {/* <a href="#" className="fa fa-facebook text-white p-3 m-1" style={{ background: "#3B5998" }}></a>
+              <a href="#" className="fa fa-twitter text-white p-3 m-1" style={{ background: "#55ACEE" }}></a> */}
+              <a href="https://www.instagram.com/muskaanbhopal" className="fa fa-instagram text-white p-2 m-1 rounded-1" style={{ background: "#125688" }}><FaInstagram /></a>
+              <a href="https://youtube.com/@muskaanbhopal" className="fa fa-youtube text-white p-2 m-1 rounded-1" style={{ background: "#bb0000" }}> <ImYoutube2 /></a>
+              <a href="https://www.instagram.com/muskaanbooks" className="fa fa-instagram text-white p-2 m-1 rounded-1" style={{ background: "#125688" }}><FaInstagram /></a>            </div>
+
             </Tab>
             <Tab eventKey="four" title=" Internship">
               <Internship />

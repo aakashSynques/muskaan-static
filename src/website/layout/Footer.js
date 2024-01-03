@@ -28,13 +28,15 @@ const Footer = () => {
                 <p>We have been actively working on this journey with members of denotified tribes and the urban poor since 1998.</p>
                 <hr />
                 <ul className="socials">
-                  <li><a href="https://www.facebook.com/" target="_blank" aria-label="Facebook Page"><FaInstagram />
+                  <li><a href="https://www.instagram.com/muskaanbooks" target="_blank" aria-label="Instagram Profile"><FaInstagram />
                   </a></li>
-                  <li><a href="https://www.instagram.com/" target="_blank" aria-label="Instagram Profile"><GrFacebookOption />
+                  <li><a href="https://www.instagram.com/muskaanbhopal" target="_blank" aria-label="Instagram Profile"><FaInstagram />
                   </a></li>
                   <li><a href="https://www.youtube.com/@muskaanbhopal" target="_blank" aria-label="YouTube Channel">
                     <ImYoutube2 />
                   </a></li>
+                  {/* <li><a href="https://www.facebook.com/ " target="_blank" aria-label="Instagram Profile"><GrFacebookOption />
+                  </a></li> */}
                 </ul>
               </div>
             </Col>
