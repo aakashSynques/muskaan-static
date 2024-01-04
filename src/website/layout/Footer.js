@@ -28,7 +28,7 @@ const Footer = () => {
                 <p>We have been actively working on this journey with members of denotified tribes and the urban poor since 1998.</p>
                 <hr />
                 <ul className="socials">
-                  <li><a href="https://www.instagram.com/muskaanbooks" target="_blank" aria-label="Instagram Profile"><FaInstagram />
+                  <li><a href="https://www.facebook.com/MuskaanBhopalNGO/" target="_blank" aria-label="Instagram Profile"><GrFacebookOption />
                   </a></li>
                   <li><a href="https://www.instagram.com/muskaanbhopal" target="_blank" aria-label="Instagram Profile"><FaInstagram />
                   </a></li>
@@ -67,7 +67,7 @@ const Footer = () => {
                   <p>Muskaan, Plot No. 264-65, Behind Canara Bank, Neelbad, Bhopal, India – 462 044</p>
                   <p><strong>Connect with us</strong></p>
                   <p>
-                    Email: muskaan@muskaan.org</p>
+                    Email: publications@muskaan.org</p> 
                 </Col>
               </Row>
             </Col>

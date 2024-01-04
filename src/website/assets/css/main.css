@@ -182,8 +182,9 @@ span.date {
 
 .connect-bg {
     /* background: linear-gradient(179deg, rgba(146, 46, -19, -37), #ff0004) top fixed, url(../images/contactbenner.jpg) top fixed; */
-background: url(../images/contactbenner.jpg) top fixed;
-    padding: 140px 0
+/* background: url(../images/contactbenner.jpg) top fixed; */
+background: url(../images/graybg.jpg) top fixed;
+padding: 53px 0;
 }
 
 .with_aside-border {
@@ -630,4 +631,11 @@ background: url(../images/contactbenner.jpg) top fixed;
 }
 .collebration-card .card{
     height: 475px;
+    border: none;
+}
+.page-margin{
+    margin-top: 20px;
+}
+.page-heigh{
+    height: 100%;
 }

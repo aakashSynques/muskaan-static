@@ -20,8 +20,8 @@ const Financial = () => {
                 <meta name="description" content="muskaan ngo" />
                 <meta name="theme-color" content="#E6E6FA" />
             </Helmet>
-            <PageTitle pageTitle="Financial" />
-            <div className='bgpettern pb-5'>
+            {/* <PageTitle pageTitle="Financial" /> */}
+            <div className='bgpettern pb-5 page-margin page-heigh'>
                 <Container className='pt-4'>
                     <h4>Financials</h4>
                     <p>Home  / Financials</p>

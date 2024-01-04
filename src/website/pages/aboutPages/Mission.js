@@ -20,8 +20,8 @@ const Mission = () => {
                     <h1>Mission</h1>
                 </Container>
             </div> */}
-<PageTitle pageTitle="Mission" />
-            <div className='bgpettern pb-5'>
+{/* <PageTitle pageTitle="Mission" /> */}
+            <div className='bgpettern pb-5 page-margin page-heigh'>
                 <Container className='pt-4'>
                     <h4>Mission</h4>
                     <p>Home  / Mission</p>

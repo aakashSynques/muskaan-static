@@ -20,8 +20,8 @@ const History = () => {
         </Container>
       </div> */}
 
-            <PageTitle pageTitle="History" />
-      <div className='bgpettern pb-5'>
+            {/* <PageTitle pageTitle="History" /> */}
+      <div className='bgpettern pb-5 page-margin page-heigh'>
         <Container className='pt-4'>
           <h4>Our History</h4>
           <p>Home  / Our History</p>

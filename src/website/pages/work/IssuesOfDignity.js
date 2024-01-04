@@ -16,40 +16,38 @@ const IssuesOfDignity = () => {
                 <meta name="theme-color" content="#E6E6FA" />
             </Helmet>
 
-            <div className='connect-bg fixed-bg'>
-                <Container className='text-center text-white'>
-                    <h1>Issues Of Dignity And Survival</h1>
-                </Container>
-            </div>
+            <div className='bgpettern pb-5 page-margin page-heigh'>
+                <Container className='pt-4'>
+                    <h4>Issues Of Dignity And Survival</h4>
+                    <p>Home  / Work / Issues Of Dignity And Survival</p>
+                    <div className='with_aside-border history'>
+                        <Accordion defaultActiveKey="0" className='mt-3'>
+                            <Accordion.Item eventKey="0">
+                                <Accordion.Header>Documents And Entitlements</Accordion.Header>
+                                <Accordion.Body>
+                                    <DocumentsAndEntitlements />
+                                </Accordion.Body>
+                            </Accordion.Item>
 
-            <div className='mt-5'>
-                <Container>
-                    <Accordion defaultActiveKey="0">
-                        <Accordion.Item eventKey="0">
-                            <Accordion.Header>Documents And Entitlements</Accordion.Header>
-                            <Accordion.Body>
-                                <DocumentsAndEntitlements />
-                            </Accordion.Body>
-                        </Accordion.Item>
-
-                        <Accordion.Item eventKey="1">
-                            <Accordion.Header>Denotified Tribes</Accordion.Header>
-                            <Accordion.Body>
-                                <DenotifiedTribes />
-                            </Accordion.Body>
-                        </Accordion.Item>
+                            <Accordion.Item eventKey="1">
+                                <Accordion.Header>Denotified Tribes</Accordion.Header>
+                                <Accordion.Body>
+                                    <DenotifiedTribes />
+                                </Accordion.Body>
+                            </Accordion.Item>
 
 
-                        <Accordion.Item eventKey="2">
-                            <Accordion.Header>Mental Health</Accordion.Header>
-                            <Accordion.Body>
-                                <MentalHealth />
-                            </Accordion.Body>
-                        </Accordion.Item>
+                            <Accordion.Item eventKey="2">
+                                <Accordion.Header>Mental Health</Accordion.Header>
+                                <Accordion.Body>
+                                    <MentalHealth />
+                                </Accordion.Body>
+                            </Accordion.Item>
 
 
 
-                    </Accordion>
+                        </Accordion>
+                    </div>
                 </Container>
             </div>
         </>

@@ -21,8 +21,8 @@ const OurTeam = () => {
                     <h1>Our Team</h1>
                 </Container>
             </div> */}
-            <PageTitle pageTitle="Our Team" />
-            <div className='bgpettern pb-5'>
+            {/* <PageTitle pageTitle="Our Team" /> */}
+            <div className='bgpettern pb-5 page-margin page-heigh'>
                 <Container className='pt-4'>
                     <h4>Our Team</h4>
                     <p>Home  / Our Team</p>

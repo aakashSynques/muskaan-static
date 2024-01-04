@@ -6,9 +6,9 @@ import PageTitle from '../../component/PageTitle'
 const Collaborations = () => {
     return (
         <>
-            <hr />
+ 
             {/* <PageTitle pageTitle='Collaborations' /> */}
-            <div className='bgpettern pb-5'>
+            <div className='bgpettern pb-5 page-margin page-heigh'>
                 <Container className='pt-4'>
                     <h4>Collaborations</h4>
                     <p>Home  / Collaborations</p>
@@ -66,7 +66,7 @@ const Collaborations = () => {
                                     <Card>
                                         <CardBody>
                                             <Image src={require('../../assets/images/aboutlogo/Kota Heritage Society.jpeg')} className='w-100 pt-5' />
-                                            <p className='pt-5'>The Kota Heritage Society exists to enable friends of Kota&#39;s heritage to share the
+                                            <p className='pt-4'>The Kota Heritage Society exists to enable friends of Kota&#39;s heritage to share the
                                                 responsibility for its upkeep and preservation. Among many other programs, KHS
                                                 is also involved in work with DNTs.</p>
                                         </CardBody>
@@ -75,7 +75,7 @@ const Collaborations = () => {
                                 <Col sm={6} lg={4} className='py-2'>
                                     <Card>
                                         <CardBody>
-                                            <Image src={require('../../assets/images/aboutlogo/Sangini Logo.png')} className='w-100 pt-5' />
+                                            <Image src={require('../../assets/images/aboutlogo/Sangini Logo.png')} className='w-100 pt-5 mt-3' />
                                             <p className='pt-5'>Established in 2003, Sangini works towards gender equality by serving as a
                                                 formal gender resource center, facilitating access to information and resources
                                                 for development professionals, and striving to protest gender-based inequalities
@@ -99,7 +99,7 @@ const Collaborations = () => {
                                 <Col sm={6} lg={4} className='py-2'>
                                     <Card>
                                         <CardBody>
-                                            <Image src={require('../../assets/images/aboutlogo/EKA logo.jpeg')} className='w-100 collebration-logo'  />
+                                            <Image src={require('../../assets/images/aboutlogo/EKA logo.jpeg')} className='w-100 '  style={{padding: "0 100px"}}/>
                                             <p className='pt-3'>The Community Development Initiative works with urban poor households in
                                                 Bhopal with a focus on Participatory Communication &amp; Collective Action.
                                                 Communities we work with include working children, women artisans, daily wage
@@ -111,8 +111,8 @@ const Collaborations = () => {
                                 <Col sm={6} lg={4} className='py-2'>
                                     <Card>
                                         <CardBody>
-                                            <Image src={require('../../assets/images/aboutlogo/grameen shiksha kendra-logo.jpeg')} className='w-100 ' />
-                                            <p>Gramin Shiksha Kendra addresses the demand for quality education in rural
+                                            <Image src={require('../../assets/images/aboutlogo/grameen shiksha kendra-logo.jpeg')} className='w-100 ' style={{padding: "0 80px"}}/>
+                                            <p className='pt-4'>Gramin Shiksha Kendra addresses the demand for quality education in rural
                                                 Sawai Madhopur through the Uday Community Education Program, fostering
                                                 community-led change and striving to eliminate discrimination based on caste or
                                                 gender in accessing education and fundamental rights.</p>
@@ -122,8 +122,8 @@ const Collaborations = () => {
                                 <Col sm={6} lg={4} className='py-2'>
                                     <Card>
                                         <CardBody>
-                                            <Image src={require('../../assets/images/aboutlogo/niwcyd_logo.jpeg')} className='w-100 collebration-logo' style={{ padding: "0 82px" }} />
-                                            <p>Since its establishment in 1982, the National Institute of Women, Child and
+                                            <Image src={require('../../assets/images/aboutlogo/niwcyd_logo.jpeg')} className='w-100 pt-2' style={{ padding: "0 100px" }} />
+                                            <p className='pt-4'>Since its establishment in 1982, the National Institute of Women, Child and
                                                 Youth Development (NIWCYD) has been actively engaged in development work
                                                 across five states in Central and Northern India, focusing on themes such as
                                                 livelihood enhancement, community organization, women empowerment, child

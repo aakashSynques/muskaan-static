@@ -314,7 +314,7 @@ const Internship = () => {
                                             EMAIL ID
                                         </b>
                                     </h5>
-                                    <p className="elementor-icon-box-description">muskaan@muskaan.org
+                                    <p className="elementor-icon-box-description">publications@muskaan.org
                                     </p>
                                 </div>
                             </div>

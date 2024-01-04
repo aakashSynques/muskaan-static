@@ -156,7 +156,7 @@ const Contect = () => {
                     EMAIL ID
                   </b>
                 </h5>
-                <p className="elementor-icon-box-description">muskaan@muskaan.org
+                <p className="elementor-icon-box-description">publications@muskaan.org
                 </p>
               </div>
             </div>
@@ -179,7 +179,7 @@ const Contect = () => {
             <div className='contact-social-icon'>
               {/* <a href="#" className="fa fa-facebook text-white p-3 m-1" style={{ background: "#3B5998" }}></a>
               <a href="#" className="fa fa-twitter text-white p-3 m-1" style={{ background: "#55ACEE" }}></a> */}
-              <a href="https://www.instagram.com/muskaanbhopal" className="fa fa-instagram text-white p-2 m-1 rounded-1" style={{ background: "#125688" }}><FaInstagram /></a>
+              <a href="https://www.instagram.com/muskaanbhopal" className="fa fa-instagram text-white p-2 m-1 rounded-1" style={{ background: "#125688" }}><GrFacebookOption /></a>
               <a href="https://youtube.com/@muskaanbhopal" className="fa fa-youtube text-white p-2 m-1 rounded-1" style={{ background: "#bb0000" }}> <ImYoutube2 /></a>
               <a href="https://www.instagram.com/muskaanbooks" className="fa fa-instagram text-white p-2 m-1 rounded-1" style={{ background: "#125688" }}><FaInstagram /></a>            </div>
 

@@ -22,9 +22,9 @@ const Policies = () => {
                 <meta name="description" content="muskaan ngo" />
                 <meta name="theme-color" content="#E6E6FA" />
             </Helmet>
-            <PageTitle pageTitle="Policies" />
+            {/* <PageTitle pageTitle="Policies" /> */}
 
-            <div className='bgpettern pb-5'>
+            <div className='bgpettern pb-5 page-margin page-heigh'>
                 <Container className='pt-4'>
                     <h4>Policies</h4>
                     <p>Home  / Policies</p>

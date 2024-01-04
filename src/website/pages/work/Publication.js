@@ -6,24 +6,27 @@ import { Helmet } from "react-helmet";
 const Publication = () => {
     return (
         <>
-          <Helmet>
-        <html lang="en" />
-        <title>Muskaan - Publication</title>
-        <meta name="twitter:title" content='Publication' />
-        <meta name="description" content="muskaan ngo" />
-        <meta name="theme-color" content="#E6E6FA" />
-      </Helmet>
-            <div className='connect-bg fixed-bg'>
-                <Container className='text-center text-white'>
-                    <h1>Publication</h1>
+            <Helmet>
+                <html lang="en" />
+                <title>Muskaan - Publication</title>
+                <meta name="twitter:title" content='Publication' />
+                <meta name="description" content="muskaan ngo" />
+                <meta name="theme-color" content="#E6E6FA" />
+            </Helmet>
+
+
+
+            <div className='bgpettern pb-5 page-margin page-heigh'>
+                <Container className='pt-4'>
+                    <h4>Publication</h4>
+                    <p>Home  / Work / Publication</p>
+                    <div className='with_aside-border history'>
+                        <div className='mt-3'>
+                            <iframe src={policies2} width='100%' height='700px' />
+                        </div>
+                    </div>
                 </Container>
             </div>
-
-            <Container className='mt-5'>
-                <Row>
-                    <iframe src={policies2} width='100%' height='700px' />
-                </Row>
-            </Container>
 
         </>
     )

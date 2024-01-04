@@ -10,8 +10,8 @@ const WhoWeWork = () => {
     return (
         <>
         
-            <PageTitle pageTitle="Who We Work With" />
-            <div className='bgpettern pb-5'>
+            {/* <PageTitle pageTitle="Who We Work With" /> */}
+            <div className='bgpettern pb-5 page-margin page-heigh'>
                 <Container className='pt-4'>
                     <h4>Who We Work With</h4>
                     <p>Home  / Who We Work With</p>

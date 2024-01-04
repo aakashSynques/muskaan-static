@@ -18,15 +18,22 @@ const Empowering = () => {
         <meta name="description" content="muskaan ngo" />
         <meta name="theme-color" content="#E6E6FA" />
       </Helmet>
-              <div className='connect-bg fixed-bg'>
+              {/* <div className='connect-bg fixed-bg'>
                 <Container className='text-center text-white'>
                         <h1>Empowering Children And Youth</h1>
                     </Container>
-                </div>
+                </div> */}
 
-                <div className='mt-5'>
-                    <Container>
-                        <Accordion defaultActiveKey="0">
+        
+
+
+                
+            <div className='bgpettern pb-5 page-margin page-heigh'>
+                <Container className='pt-4'>
+                    <h4>Empowering Children And Youth</h4>
+                    <p>Home  / Work / Empowering Children And Youth</p>
+                    <div className='with_aside-border history'>
+                    <Accordion defaultActiveKey="0" className='mt-3'>
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>Azad Jugnu Club</Accordion.Header>
                                 <Accordion.Body>
@@ -70,8 +77,9 @@ const Empowering = () => {
                             </Accordion.Item>
 
                         </Accordion>
-                    </Container>
-                </div>
+                    </div>
+                </Container>
+            </div>
             </>
     )
 }

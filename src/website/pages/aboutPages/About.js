@@ -11,7 +11,7 @@ const About = () => {
         <html lang="en" />
         <title>Muskaan - About</title>
         <meta name="title" content='About' />
-        <meta name="description" content="muskaan ngo" />
+        <meta name="description" content="muskaan" />
         <meta name="theme-color" content="#E6E6FA" />
       </Helmet>
 
@@ -20,9 +20,9 @@ const About = () => {
           <h1>About Us</h1>
         </Container>
       </div> */}
-      <PageTitle pageTitle="About Us" />
+      {/* <PageTitle pageTitle="About Us" /> */}
 
-      <div className='bgpettern pb-5'>
+      <div className='bgpettern pb-5 page-margin page-heigh'>
         <Container className='pt-4'>
           <h4>About</h4>
           <p>Home  / About</p>
